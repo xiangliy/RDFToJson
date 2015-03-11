@@ -1,0 +1,16 @@
+name,uri
+foaf,http://xmlns.com/foaf/spec/index.rdf
+dcterms,http://dublincore.org/2012/06/14/dcterms.rdf
+skos,http://www.w3.org/2009/08/skos-reference/skos.rdf
+geo,http://www.w3.org/2003/01/geo/wgs84_pos
+rss,http://purl.org/rss/1.0/schema.rdf
+sioc,http://rdfs.org/sioc/ns#
+vann,http://vocab.org/vann/.rdf
+vs,http://vocab.org/vann/.rdf
+prov,http://www.w3.org/ns/prov.owl
+bibo,http://purl.org/ontology/bibo/
+org,http://www.w3.org/ns/org#
+time,http://www.w3.org/2006/time
+adms,http://www.w3.org/ns/adms
+lode,http://linkedevents.org/ontology/2010-10-07/rdfxml/
+frbr,http://vocab.org/frbr/core.rdf
