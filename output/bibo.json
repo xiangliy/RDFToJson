@@ -1,0 +1,2494 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b100",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Issue",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b101",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : "terms:isPartOf"
+  }, {
+    "@id" : "_:b102",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b103",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b11",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b13",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Issue",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b14",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Document",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b17",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b19",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b23",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b24",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b25",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b30",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Slide",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b31",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b34",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b37",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":LegalDocument",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b38",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Article",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b39",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "rdf:List", "rdf:Seq" ]
+    }
+  }, {
+    "@id" : "_:b4",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Issue",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b40",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "rdf:List", "rdf:Seq" ]
+    }
+  }, {
+    "@id" : "_:b42",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "rdf:List", "rdf:Seq" ]
+    }
+  }, {
+    "@id" : "_:b45",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b5",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b50",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : "_:b97",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b53",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Book",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b54",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b55",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b57",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b6",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b60",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b64",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b73",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b75",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b78",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b79",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Legislation",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b80",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b81",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b85",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Document",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b86",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b87",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Webpage",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b92",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b93",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b94",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b96",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "_:b97",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b98",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Collection", ":Document" ]
+    }
+  }, {
+    "@id" : "_:b99",
+    "@type" : "owl:Restriction",
+    "allValuesFrom" : ":Issue",
+    "onProperty" : "terms:hasPart"
+  }, {
+    "@id" : "prism:doi",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":doi"
+  }, {
+    "@id" : "prism:eIssn",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":eissn"
+  }, {
+    "@id" : "prism:edition",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":edition"
+  }, {
+    "@id" : "prism:endingPage",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":pageEnd"
+  }, {
+    "@id" : "prism:isbn",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":isbn"
+  }, {
+    "@id" : "prism:issn",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":issn"
+  }, {
+    "@id" : "prism:issue",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":issue"
+  }, {
+    "@id" : "prism:number",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":locator"
+  }, {
+    "@id" : "prism:startingPage",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":pageStart"
+  }, {
+    "@id" : "prism:volume",
+    "@type" : "owl:DatatypeProperty",
+    "equivalentProperty" : ":volume"
+  }, {
+    "@id" : "event:Event",
+    "@type" : "owl:Class",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe bibliographic related events such as conferences, hearing, etc."
+    }
+  }, {
+    "@id" : "event:agent",
+    "@type" : "owl:ObjectProperty",
+    "changeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link an agent (a person) to an event (a conference, an hearing, etc.)"
+    }
+  }, {
+    "@id" : "event:place",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to relate an event such as a conference to the geographical place where it happens, for example Paris."
+    }
+  }, {
+    "@id" : "event:produced_in",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "event:product",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link an event such as a conference to an outcome (a product) of that event, for example, an article, a proceeding, etc."
+    }
+  }, {
+    "@id" : "event:sub_event",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link big events with smaller events such as workshops that happen in the context of a conference."
+    }
+  }, {
+    "@id" : "event:time",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe the timing of an event. For example, when a conference starts and stops."
+    }
+  }, {
+    "@id" : "terms:Agent",
+    "@type" : "owl:Class",
+    "equivalentClass" : "foaf:Agent",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "BIBO assert that a dcterms:Agent is an equivalent class to foaf:Agent.\nThis means that all the individuals belonging to the foaf:Agent class\nalso belongs to the dcterms:Agent class. This way, dcterms:contributor\ncan be used on foaf:Person, foaf:Organization, foaf:Agent and foaf:Group.\nEven if this link is not done in neither the FOAF nor the DCTERMS ontologies this is a wide spread fact that is asserted by BIBO."
+    }
+  }, {
+    "@id" : "terms:contributor",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link a bibliographic item to one of its contributor: can be an author, an editor, a publisher, etc."
+    }
+  }, {
+    "@id" : "terms:created",
+    "@type" : "owl:DatatypeProperty",
+    "subPropertyOf" : "terms:date",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe the creation date of a bibliographic item"
+    }
+  }, {
+    "@id" : "terms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "terms:date",
+    "@type" : "owl:DatatypeProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Use to link a bibliographic item to the date of an event. Check dcterms:created and other for proper specializations for this property"
+    }
+  }, {
+    "@id" : "terms:description",
+    "@type" : [ "owl:DatatypeProperty", "owl:AnnotationProperty" ],
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe a bibliographic resource."
+    }
+  }, {
+    "@id" : "terms:format",
+    "@type" : "owl:ObjectProperty",
+    "example" : {
+      "@language" : "en",
+      "@value" : "<dcterms:format>\n   <dcterms:MediaTypeOrExtent>\n     <rdf:value>text/html</rdf:value>\n     <rdfs:label>HTML</rdfs:label>\n   </dcterms:MediaTypeOrExtent>\n </dcterms:format>"
+    },
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe the format of a bibliographic resource."
+    }
+  }, {
+    "@id" : "terms:hasPart",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "terms:identifier",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "terms:isPartOf",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "terms:isReferencedBy",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to relate a reference citation to a bibliographic resource."
+    }
+  }, {
+    "@id" : "terms:isVersionOf",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "terms:issued",
+    "@type" : "owl:DatatypeProperty",
+    "subPropertyOf" : "terms:date",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe the issue date of a bibliographic resource"
+    }
+  }, {
+    "@id" : "terms:language",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link a bibliographic resource to the language used to express it."
+    }
+  }, {
+    "@id" : "terms:publisher",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link a bibliographic item to its publisher."
+    }
+  }, {
+    "@id" : "terms:relation",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "terms:rights",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe rights related to a bibliographic resource."
+    }
+  }, {
+    "@id" : "terms:subject",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe the subject of a bibliographic resource."
+    }
+  }, {
+    "@id" : "terms:title",
+    "@type" : [ "owl:ObjectProperty", "owl:AnnotationProperty" ],
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe the title of a bibliographic resource"
+    }
+  }, {
+    "@id" : "http://purl.org/ontology/bibo/",
+    "@type" : "owl:Ontology",
+    "creator" : [ ":fgiasson", ":bdarcus" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "The Bibliographic Ontology describes\nbibliographic things on the semantic Web in RDF.  This ontology can be\nused as a citation ontology, as a document classification ontology, or\nsimply as a way to describe any kind of document in RDF. It has been\ninspired by many existing document description metadata formats, and\ncan be used as a common ground for converting other bibliographic data\nsources."
+    },
+    "title" : "The Bibliographic Ontology",
+    "versionInfo" : "http://purl.org/ontology/bibo/1.3/"
+  }, {
+    "@id" : ":AcademicArticle",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A scholarly academic article, typically published in a journal."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Academic Article"
+    },
+    "subClassOf" : ":Article",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Article",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Article"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":AudioDocument",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An audio document; aka record."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "audio document"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":AudioVisualDocument",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An audio-visual document; film, video, and so forth."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "audio-visual document"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Bill",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Draft legislation presented for discussion to a legal body."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Bill"
+    },
+    "subClassOf" : ":Legislation",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Book",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Book"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":BookSection",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A section of a book."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Book Section"
+    },
+    "subClassOf" : ":DocumentPart",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Brief",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A written argument submitted to a court."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Brief"
+    },
+    "subClassOf" : ":LegalCaseDocument",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Chapter",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A chapter of a book."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Chapter"
+    },
+    "subClassOf" : ":BookSection",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Code",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A collection of statutes."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Code"
+    },
+    "subClassOf" : [ "_:b23", "_:b79", ":Periodical" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":CollectedDocument",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document that simultaneously contains other documents."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Collected Document"
+    },
+    "subClassOf" : [ "_:b14", "_:b15", ":Document" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Collection",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A collection of Documents or Collections"
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Collection"
+    },
+    "subClassOf" : "_:b50",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Conference",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A meeting for consultation or discussion."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Conference"
+    },
+    "subClassOf" : "event:Event",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":CourtReporter",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A collection of legal cases."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Court Reporter"
+    },
+    "subClassOf" : [ "_:b37", "_:b73", ":Periodical" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Document",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Document"
+    },
+    "equivalentClass" : "foaf:Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":DocumentPart",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "a distinct part of a larger document or collected document."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "document part"
+    },
+    "subClassOf" : [ "_:b101", ":Document" ],
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":DocumentStatus",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The status of the publication of a document."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Document Status"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : ":EditedBook",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An edited book."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Edited Book"
+    },
+    "subClassOf" : ":CollectedDocument",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Email",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A written communication addressed to a person or organization and transmitted electronically."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "EMail"
+    },
+    "subClassOf" : ":PersonalCommunicationDocument",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Event",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : ":Excerpt",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A passage selected from a larger work."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Excerpt"
+    },
+    "subClassOf" : ":DocumentPart",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Film",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "aka movie."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Film"
+    },
+    "subClassOf" : ":AudioVisualDocument",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Hearing",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance or a session in which testimony and arguments are presented, esp. before an official, as a judge in a lawsuit."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Hearing"
+    },
+    "subClassOf" : "event:Event",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Image",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document that presents visual or diagrammatic information."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Image"
+    },
+    "subClassOf" : ":Document",
+    "equivalentClass" : "foaf:Image",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Interview",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A formalized discussion between two or more people."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Interview"
+    },
+    "subClassOf" : "event:Event",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Issue",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "something that is printed or published and distributed, esp. a given number of a periodical"
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Issue"
+    },
+    "subClassOf" : [ "_:b38", "_:b92", ":CollectedDocument" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Journal",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A periodical of scholarly journal Articles."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Journal"
+    },
+    "subClassOf" : [ "_:b75", "_:b100", ":Periodical" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":LegalCaseDocument",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document accompanying a legal case."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Legal Case Document"
+    },
+    "subClassOf" : ":LegalDocument",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":LegalDecision",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document containing an authoritative determination (as a decree or judgment) made after consideration of facts or law."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Decision"
+    },
+    "subClassOf" : ":LegalCaseDocument",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":LegalDocument",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A legal document; for example, a court decision, a brief, and so forth."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Legal Document"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Legislation",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A legal document proposing or enacting a law or a group of laws."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Legislation"
+    },
+    "subClassOf" : ":LegalDocument",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Letter",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A written or printed communication addressed to a person or organization and usually transmitted by mail."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Letter"
+    },
+    "subClassOf" : ":PersonalCommunicationDocument",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Magazine",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A periodical of magazine Articles. A magazine is a publication that is issued periodically, usually bound in a paper cover, and typically contains essays, stories, poems, etc., by many writers, and often photographs and drawings, frequently specializing in a particular subject or area, as hobbies, news, or sports."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Magazine"
+    },
+    "subClassOf" : [ "_:b96", "_:b13", ":Periodical" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Manual",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A small reference book, especially one giving instructions."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Manual"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Manuscript",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An unpublished Document, which may also be submitted to a publisher for publication."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Manuscript"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Map",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A graphical depiction of geographic features."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Map"
+    },
+    "subClassOf" : ":Image",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":MultiVolumeBook",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A loose, thematic, collection of Documents, often Books."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Series"
+    },
+    "subClassOf" : [ "_:b53", ":Collection" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Newspaper",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A periodical of documents, usually issued daily or weekly, containing current news, editorials, feature articles, and usually advertising."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Newspaper"
+    },
+    "subClassOf" : [ "_:b86", "_:b99", ":Periodical" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Note",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Notes or annotations about a resource."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Note"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Patent",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Patent"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Performance",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A public performance."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Performance"
+    },
+    "subClassOf" : "event:Event",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Periodical",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A group of related documents issued at regular intervals."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Periodical"
+    },
+    "subClassOf" : [ "_:b4", "_:b5", ":Collection" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":PersonalCommunication",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A communication between an agent and one or more specific recipients."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Personal Communication"
+    },
+    "subClassOf" : "event:Event",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":PersonalCommunicationDocument",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A personal communication manifested in some document."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Personal Communication Document"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Proceedings",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A compilation of documents published from an event, such as a conference."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Proceedings"
+    },
+    "subClassOf" : ":Book",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Quote",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An excerpted collection of words."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Quote"
+    },
+    "subClassOf" : ":Excerpt",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":ReferenceSource",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document that presents authoritative reference information, such as a dictionary or encylopedia ."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Reference Source"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Report",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc.."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Report"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Series",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A loose, thematic, collection of Documents, often Books."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Series"
+    },
+    "subClassOf" : [ "_:b85", ":Collection" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Slide",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A slide in a slideshow"
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Slide"
+    },
+    "subClassOf" : ":DocumentPart",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Slideshow",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A presentation of a series of slides, usually presented in front of an audience with written text and images."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Slideshow"
+    },
+    "subClassOf" : [ "_:b30", ":Document" ],
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Standard",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document describing a standard"
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Standard"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Statute",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A bill enacted into law."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Statute"
+    },
+    "subClassOf" : ":Legislation",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Thesis",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document created to summarize research findings associated with the completion of an academic degree."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Thesis"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":ThesisDegree",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The academic degree of a Thesis"
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Thesis degree"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : ":Webpage",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A web page is an online document available (at least initially) on the world wide web. A web page is written first and foremost to appear on the web, as distinct from other online resources such as books, manuscripts or audio documents which use the web primarily as a distribution mechanism alongside other more traditional methods such as print."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Webpage"
+    },
+    "subClassOf" : ":Document",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Website",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A group of Webpages accessible on the Web."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Website"
+    },
+    "subClassOf" : [ "_:b64", "_:b87", ":Collection" ],
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":Workshop",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc."
+    },
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Workshop"
+    },
+    "subClassOf" : "event:Event",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":abstract",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : "A summary of the resource.",
+    "domain" : "rdfs:Resource",
+    "isDefinedBy" : "http://purl.org/dc/terms/",
+    "label" : "abstract",
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":affirmedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A legal decision that affirms a ruling."
+    },
+    "domain" : ":LegalDecision",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "range" : ":LegalDecision",
+    "subPropertyOf" : ":subsequentLegalDecision"
+  }, {
+    "@id" : ":annotates",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Critical or explanatory note for a Document."
+    },
+    "domain" : ":Note",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "annotates"
+    },
+    "range" : "rdfs:Resource",
+    "subPropertyOf" : "terms:relation",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":argued",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The date on which a legal case is argued before a court. Date is of format xsd:date"
+    },
+    "domain" : ":LegalDocument",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "date argued"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":asin",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b8",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":authorList",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An ordered list of authors. Normally, this list is seen as a priority list that order authors by importance."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "list of authors"
+    },
+    "range" : "_:b42",
+    "subPropertyOf" : ":contributorList",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":bdarcus",
+    "@type" : [ "foaf:Person", "owl:Thing" ],
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "seeAlso" : "http://purl.org/net/darcusb/info#me",
+    "name" : "Bruce D'Arcus"
+  }, {
+    "@id" : ":chapter",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An chapter number"
+    },
+    "domain" : ":BookSection",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "chapter"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":locator",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":citedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a document to another document that cites the\nfirst document."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "cited by"
+    },
+    "range" : ":Document",
+    "inverseOf" : ":cites",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":cites",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a document to another document that is cited\nby the first document as reference, comment, review, quotation or for\nanother purpose."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "cites"
+    },
+    "range" : ":Document",
+    "subPropertyOf" : "terms:references",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":coden",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b103",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":content",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This property is for a plain-text rendering of the content of a Document. While the plain-text content of an entire document could be described by this property."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "content"
+    },
+    "range" : "rdfs:Literal",
+    "owl:deprecated" : true,
+    "term_status" : "unstable",
+    "historyNote" : {
+      "@language" : "en",
+      "@value" : "bibo:content has been deprecated; we recommend to use \"rdf:value\" for this purpose. Here is the rational behind this choice: http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfvalue"
+    }
+  }, {
+    "@id" : ":contributorList",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An ordered list of contributors. Normally, this list is seen as a priority list that order contributors by importance."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "list of contributors"
+    },
+    "range" : "_:b40",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":court",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A court associated with a legal document; for example, that which issues a decision."
+    },
+    "domain" : ":LegalDocument",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "court"
+    },
+    "range" : "foaf:Organization",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":degree",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The thesis degree."
+    },
+    "domain" : ":Thesis",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "degree"
+    },
+    "range" : ":ThesisDegree",
+    "term_status" : "unstable",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "We are not defining, using an enumeration, the range of the bibo:degree to the defined list of bibo:ThesisDegree. We won't do it because we want people to be able to define new degress if needed by some special usecases. Creating such an enumeration would restrict this to happen."
+    }
+  }, {
+    "@id" : "degrees:ma",
+    "@type" : [ "owl:Thing", ":ThesisDegree" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "masters degree in arts"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "M.A."
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "degrees:ms",
+    "@type" : [ "owl:Thing", ":ThesisDegree" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "masters degree in science"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "M.S."
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "degrees:phd",
+    "@type" : [ ":ThesisDegree", "owl:Thing" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "PhD degree"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "PhD degree"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : ":director",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Film director."
+    },
+    "domain" : ":AudioVisualDocument",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "director",
+    "range" : "foaf:Agent",
+    "subPropertyOf" : "terms:contributor",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":distributor",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Distributor of a document or a collection of documents."
+    },
+    "domain" : "_:b17",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "distributor"
+    },
+    "range" : "foaf:Agent",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":doi",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b98",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":eanucc13",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b81",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":edition",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The name defining a special edition of a document. Normally its a literal value composed of a version number and words."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "edition"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":editor",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A person having managerial and sometimes policy-making responsibility for the editorial part of a publishing firm or of a newspaper, magazine, or other publication."
+    },
+    "domain" : "_:b19",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "editor",
+    "range" : "foaf:Agent",
+    "subPropertyOf" : "terms:contributor",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":editorList",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An ordered list of editors. Normally, this list is seen as a priority list that order editors by importance."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "list of editors"
+    },
+    "range" : "_:b39",
+    "subPropertyOf" : ":contributorList",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":eissn",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b80",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":fgiasson",
+    "@type" : [ "owl:Thing", "foaf:Person" ],
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "seeAlso" : "http://fgiasson.com/me/",
+    "name" : "Frederick Giasson"
+  }, {
+    "@id" : ":gtin14",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b45",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":handle",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b78",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":identifier",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b60",
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : ":interviewee",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An agent that is interviewed by another agent."
+    },
+    "domain" : "foaf:Agent",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "interviewee",
+    "range" : "foaf:Agent",
+    "subPropertyOf" : "terms:contributor",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":interviewer",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An agent that interview another agent."
+    },
+    "domain" : "foaf:Agent",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "interviewer",
+    "range" : "foaf:Agent",
+    "subPropertyOf" : "terms:contributor",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":isbn",
+    "@type" : "owl:DatatypeProperty",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":isbn10",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b57",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":isbn"
+  }, {
+    "@id" : ":isbn13",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b34",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":isbn"
+  }, {
+    "@id" : ":issn",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b24",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":issue",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An issue number"
+    },
+    "domain" : ":Issue",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "issue"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":locator",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":issuer",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "An entity responsible for issuing often informally published documents such as press releases, reports, etc.",
+    "domain" : "_:b54",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "issuer",
+    "range" : "foaf:Agent",
+    "subPropertyOf" : "terms:publisher",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":lccn",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b11",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":locator",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A description (often numeric) that locates an item within a containing document or collection."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "locator"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":numPages",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The number of pages contained in a document"
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "number of pages"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":numVolumes",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The number of volumes contained in a collection of documents (usually a series, periodical, etc.)."
+    },
+    "domain" : ":Collection",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "number of volumes"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":number",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A generic item or document number. Not to be confused with issue number."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "number"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":oclcnum",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b102",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":organizer",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The organizer of an event; includes conference organizers, but also government agencies or other bodies that are responsible for conducting hearings."
+    },
+    "domain" : "event:Event",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "organizer"
+    },
+    "range" : "foaf:Agent",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":owner",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Owner of a document or a collection of documents."
+    },
+    "domain" : "_:b55",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "owner"
+    },
+    "range" : "foaf:Agent",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":pageEnd",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Ending page number within a continuous page range."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "page end"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":locator",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":pageStart",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Starting page number within a continuous page range."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "page start"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":locator",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":pages",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A string of non-contiguous page spans that locate a Document within a Collection. Example: 23-25, 34, 54-56. For continuous page ranges, use the pageStart and pageEnd properties."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "pages"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":locator",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":performer",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":Performance",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "performer",
+    "range" : "foaf:Agent",
+    "subPropertyOf" : "terms:contributor",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":pmid",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b25",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":prefixName",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The prefix of a name"
+    },
+    "domain" : "foaf:Agent",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "prefix name"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":presentedAt",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a document to an event; for example, a paper to a conference."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "presented at"
+    },
+    "range" : ":Event",
+    "subPropertyOf" : "event:produced_in",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":presents",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates an event to associated documents; for example, conference to a paper."
+    },
+    "domain" : ":Event",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "presented at"
+    },
+    "range" : ":Document",
+    "subPropertyOf" : "event:product",
+    "inverseOf" : ":presentedAt",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":producer",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Producer of a document or a collection of documents."
+    },
+    "domain" : "_:b31",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "producer"
+    },
+    "range" : "foaf:Agent",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":recipient",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An agent that receives a communication document."
+    },
+    "domain" : ":PersonalCommunicationDocument",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "recipient",
+    "range" : "foaf:Agent",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":reproducedIn",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The resource in which another resource is reproduced."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "range" : ":Document",
+    "subPropertyOf" : "terms:isPartOf",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":reversedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A legal decision that reverses a ruling."
+    },
+    "domain" : ":LegalDecision",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "range" : ":LegalDecision",
+    "subPropertyOf" : ":subsequentLegalDecision"
+  }, {
+    "@id" : ":reviewOf",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a review document to a reviewed thing (resource, item, etc.)."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "review of"
+    },
+    "range" : "rdfs:Resource",
+    "subPropertyOf" : "terms:relation",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":section",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A section number"
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "section"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":locator",
+    "term_status" : "unstable",
+    "example" : {
+      "@language" : "en",
+      "@value" : "Di Rado, Alicia. 1995. Trekking through college: Classes explore\nmodern society using the world of Star trek. Los Angeles Times, March\n15, sec. A, p. 3."
+    }
+  }, {
+    "@id" : ":shortDescription",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":Document",
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : ":shortTitle",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The abbreviation of a title."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "short title"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":sici",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b16",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":status",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The publication status of (typically academic) content."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "status"
+    },
+    "range" : ":DocumentStatus",
+    "term_status" : "stable",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "We are not defining, using an enumeration, the range of the bibo:status to the defined list of bibo:DocumentStatus. We won't do it because we want people to be able to define new status if needed by some special usecases. Creating such an enumeration would restrict this to happen."
+    }
+  }, {
+    "@id" : "status:accepted",
+    "@type" : [ "owl:Thing", ":DocumentStatus" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Accepted for publication after peer reviewing."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "accepted"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:draft",
+    "@type" : [ ":DocumentStatus", "owl:Thing" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Document drafted"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "draft"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:forthcoming",
+    "@type" : [ ":DocumentStatus", "owl:Thing" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Document to be published"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "forthcoming"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:legal",
+    "@type" : [ "owl:Thing", ":DocumentStatus" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Legal document"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "legal"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:nonPeerReviewed",
+    "@type" : [ "owl:Thing", ":DocumentStatus" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A document that is not peer reviewed"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "non peer reviewed"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:peerReviewed",
+    "@type" : [ ":DocumentStatus", "owl:Thing" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The process by which articles are chosen to be included in a refereed journal. An editorial board consisting of experts in the same field as the author review the article and decide if it is authoritative enough for publication."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "peer reviewed"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:published",
+    "@type" : [ ":DocumentStatus", "owl:Thing" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Published document"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "published"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:rejected",
+    "@type" : [ "owl:Thing", ":DocumentStatus" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Rejected for publication after peer reviewing."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "rejected"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : "status:unpublished",
+    "@type" : [ ":DocumentStatus", "owl:Thing" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Unpublished document"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "unpublished"
+    },
+    "term_status" : "stable"
+  }, {
+    "@id" : ":subsequentLegalDecision",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A legal decision on appeal that takes action on a case (affirming it, reversing it, etc.)."
+    },
+    "domain" : ":LegalDecision",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "range" : ":LegalDecision",
+    "subPropertyOf" : "terms:isReferencedBy"
+  }, {
+    "@id" : ":suffixName",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The suffix of a name"
+    },
+    "domain" : "foaf:Agent",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "suffix name"
+    },
+    "range" : "rdfs:Literal",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":transcriptOf",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a document to some transcribed original."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "transcript of"
+    },
+    "range" : "rdfs:Resource",
+    "subPropertyOf" : "terms:relation",
+    "term_status" : "unstable"
+  }, {
+    "@id" : ":translationOf",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a translated document to the original document."
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "translation of"
+    },
+    "range" : ":Document",
+    "subPropertyOf" : "terms:isVersionOf",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":translator",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A person who translates written document from one language to another."
+    },
+    "domain" : "_:b6",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : "translator",
+    "range" : "foaf:Agent",
+    "subPropertyOf" : "terms:contributor",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":upc",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "_:b93",
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier"
+  }, {
+    "@id" : ":uri",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Universal Resource Identifier of a document"
+    },
+    "domain" : "_:b94",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "uri"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":identifier",
+    "term_status" : "stable"
+  }, {
+    "@id" : ":volume",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A volume number"
+    },
+    "domain" : ":Document",
+    "isDefinedBy" : "http://purl.org/ontology/bibo/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "volume"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : ":locator",
+    "term_status" : "stable"
+  }, {
+    "@id" : "schema:localityName",
+    "@type" : "owl:DatatypeProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to name the locality of a publisher, an author, etc."
+    }
+  }, {
+    "@id" : "rdf:List",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "rdf:Seq",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "rdf:value",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe the content of a bibo:Document and othr bibliographic resouces.\n\nWe suggest to use this property instead of the deprecated \"bibo:content\" one."
+    }
+  }, {
+    "@id" : "rdfs:Resource",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "owl:Thing",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "owl:deprecated",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "ns:term_status",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "skos:changeNote",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "skos:editorialNote",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "skos:example",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "skos:historyNote",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "skos:note",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "skos:scopeNote",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "foaf:Agent",
+    "@type" : "owl:Class",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."
+    }
+  }, {
+    "@id" : "foaf:Document",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:Image",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:Organization",
+    "@type" : "owl:Class",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Ued to describe an organization related to bibliographic items such as a publishing company, etc."
+    }
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to describe a Person related to a bibliographic ite such as an author, an editor, etc."
+    }
+  }, {
+    "@id" : "foaf:based_near",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link an agent, related to bibliographic things, to a place where it is based near: can be a city, a monument, a building, etc."
+    }
+  }, {
+    "@id" : "foaf:depiction",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link an agent with an image that depict it."
+    }
+  }, {
+    "@id" : "foaf:family_name",
+    "@type" : "owl:DatatypeProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "This is the property we choose to use to describe the family name of a person related to a bibliographic resource."
+    }
+  }, {
+    "@id" : "foaf:givenname",
+    "@type" : "owl:DatatypeProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "This is the property we choose to describe the given name of a Person related to a bibliographic resource. This is the first name of a person."
+    }
+  }, {
+    "@id" : "foaf:homepage",
+    "@type" : "owl:ObjectProperty",
+    "scopeNote" : {
+      "@language" : "en",
+      "@value" : "Used to link an agent to its homepage (which is a web page accessible using a URL)."
+    }
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  } ],
+  "@context" : {
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "term_status" : "http://www.w3.org/2003/06/sw-vocab-status/ns#term_status",
+    "comment" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "label" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "scopeNote" : "http://www.w3.org/2004/02/skos/core#scopeNote",
+    "unionOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#unionOf",
+      "@type" : "@id"
+    },
+    "allValuesFrom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#allValuesFrom",
+      "@type" : "@id"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "equivalentProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentProperty",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "minCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "name" : "http://xmlns.com/foaf/0.1/name",
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "example" : "http://www.w3.org/2004/02/skos/core#example",
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "versionInfo" : "http://www.w3.org/2002/07/owl#versionInfo",
+    "description" : "http://purl.org/dc/terms/description",
+    "title" : "http://purl.org/dc/terms/title",
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "editorialNote" : "http://www.w3.org/2004/02/skos/core#editorialNote",
+    "equivalentClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
+      "@type" : "@id"
+    },
+    "changeNote" : "http://www.w3.org/2004/02/skos/core#changeNote",
+    "maxCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#maxCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "historyNote" : "http://www.w3.org/2004/02/skos/core#historyNote",
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "" : "http://purl.org/ontology/bibo/",
+    "schema" : "http://schemas.talis.com/2005/address/schema#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "ns" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "degrees" : "http://purl.org/ontology/bibo/degrees/",
+    "terms" : "http://purl.org/dc/terms/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bibo" : "http://purl.org/ontology/bibo/",
+    "vann" : "http://purl.org/vocab/vann/",
+    "event" : "http://purl.org/NET/c4dm/event.owl#",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "prism" : "http://prismstandard.org/namespaces/1.2/basic/",
+    "status" : "http://purl.org/ontology/bibo/status/"
+  }
+}

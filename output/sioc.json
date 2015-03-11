@@ -1,0 +1,1378 @@
+{
+  "@graph" : [ {
+    "@id" : "dcterms:date",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "dcterms:references",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "dcterms:subject",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "http://rdfs.org/sioc/ns#",
+    "@type" : [ "owl:Thing", "owl:Ontology" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "SIOC (Semantically-Interlinked Online Communities) is an ontology for describing the information in online communities. \nThis information can be used to export information from online communities and to link them together. The scope of the application areas that SIOC can be used for includes (and is not limited to) weblogs, message boards, mailing lists and chat channels."
+    },
+    "title" : {
+      "@language" : "en",
+      "@value" : "SIOC Core Ontology Namespace"
+    },
+    "seeAlso" : "http://rdfs.org/sioc/spec",
+    "versionInfo" : "Revision: 1.35"
+  }, {
+    "@id" : "sioc:Community",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Community is a high-level concept that defines an online community and what it consists of."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Community"
+    },
+    "disjointWith" : [ "sioc:UserAccount", "sioc:Role", "sioc:Item" ]
+  }, {
+    "@id" : "sioc:Container",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An area in which content Items are contained."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Container"
+    },
+    "disjointWith" : [ "sioc:Usergroup", "sioc:UserAccount", "sioc:Role", "sioc:Item" ]
+  }, {
+    "@id" : "sioc:Forum",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A discussion area on which Posts or entries are made."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Forum"
+    },
+    "subClassOf" : "sioc:Container"
+  }, {
+    "@id" : "sioc:Item",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An Item is something which can be in a Container."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Item"
+    },
+    "disjointWith" : [ "sioc:Usergroup", "sioc:UserAccount", "sioc:Space", "sioc:Role", "sioc:Container" ]
+  }, {
+    "@id" : "sioc:Post",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An article or message that can be posted to a Forum."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Post"
+    },
+    "subClassOf" : [ "foaf:Document", "sioc:Item" ]
+  }, {
+    "@id" : "sioc:Role",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Role is a function of a UserAccount within a scope of a particular Forum, Site, etc."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Role"
+    },
+    "disjointWith" : [ "sioc:Usergroup", "sioc:UserAccount", "sioc:Space", "sioc:Item", "sioc:Container" ]
+  }, {
+    "@id" : "sioc:Site",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Site can be the location of an online community or set of communities, with UserAccounts and Usergroups creating Items in a set of Containers. It can be thought of as a web-accessible data Space."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Site"
+    },
+    "subClassOf" : "sioc:Space"
+  }, {
+    "@id" : "sioc:Space",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Space is a place where data resides, e.g. on a website, desktop, fileshare, etc."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Space"
+    },
+    "disjointWith" : [ "sioc:Usergroup", "sioc:UserAccount", "sioc:Role", "sioc:Item" ]
+  }, {
+    "@id" : "sioc:Thread",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A container for a series of threaded discussion Posts or Items."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Thread"
+    },
+    "subClassOf" : "sioc:Container"
+  }, {
+    "@id" : "sioc:User",
+    "@type" : "owl:DeprecatedClass",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "UserAccount is now preferred. This is a deprecated class for a User in an online community site."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "User"
+    },
+    "subClassOf" : "foaf:OnlineAccount",
+    "disjointWith" : [ "sioc:Role", "sioc:Usergroup", "sioc:Container", "sioc:Item", "sioc:Space" ],
+    "equivalentClass" : "sioc:UserAccount",
+    "versionInfo" : "This class is deprecated. Use sioc:UserAccount from the SIOC ontology instead."
+  }, {
+    "@id" : "sioc:UserAccount",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A user account in an online community site."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "User Account"
+    },
+    "subClassOf" : "foaf:OnlineAccount",
+    "disjointWith" : [ "sioc:Role", "sioc:Usergroup", "sioc:Space", "sioc:Container", "sioc:Item" ]
+  }, {
+    "@id" : "sioc:Usergroup",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A set of UserAccounts whose owners have a common purpose or interest. Can be used for access control purposes."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Usergroup"
+    },
+    "disjointWith" : [ "sioc:UserAccount", "sioc:Space", "sioc:Role", "sioc:Item", "sioc:Container" ]
+  }, {
+    "@id" : "sioc:about",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Specifies that this Item is about a particular resource, e.g. a Post describing a book, hotel, etc."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "about"
+    }
+  }, {
+    "@id" : "sioc:account_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Refers to the foaf:Agent or foaf:Person who owns this sioc:UserAccount."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "account of"
+    },
+    "range" : "foaf:Agent",
+    "inverseOf" : "foaf:account"
+  }, {
+    "@id" : "sioc:addressed_to",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Refers to who (e.g. a UserAccount, e-mail address, etc.) a particular Item is addressed to."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "addressed to"
+    }
+  }, {
+    "@id" : "sioc:administrator_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Site that the UserAccount is an administrator of."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "administrator of"
+    },
+    "range" : "sioc:Site",
+    "inverseOf" : "sioc:has_administrator"
+  }, {
+    "@id" : "sioc:attachment",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The URI of a file attached to an Item."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "attachment"
+    }
+  }, {
+    "@id" : "sioc:avatar",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An image or depiction used to represent this UserAccount."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "avatar"
+    },
+    "subPropertyOf" : "foaf:depiction"
+  }, {
+    "@id" : "sioc:container_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An Item that this Container contains."
+    },
+    "domain" : "sioc:Container",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "container of"
+    },
+    "range" : "sioc:Item",
+    "inverseOf" : "sioc:has_container"
+  }, {
+    "@id" : "sioc:content",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The content of the Item in plain text format."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "content"
+    },
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "sioc:content_encoded",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The encoded content of the Post, contained in CDATA areas."
+    },
+    "domain" : "sioc:Post",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "content encoded"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use content:encoded from the RSS 1.0 content module instead."
+  }, {
+    "@id" : "sioc:created_at",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "When this was created, in ISO 8601 format."
+    },
+    "domain" : "sioc:Post",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "created at"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use dcterms:created from the Dublin Core ontology instead."
+  }, {
+    "@id" : "sioc:creator_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A resource that the UserAccount is a creator of."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "creator of"
+    },
+    "inverseOf" : "sioc:has_creator"
+  }, {
+    "@id" : "sioc:description",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The content of the Post."
+    },
+    "domain" : "sioc:Post",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "description"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use sioc:content or other methods (AtomOwl, content:encoded from RSS 1.0, etc.) instead."
+  }, {
+    "@id" : "sioc:earlier_version",
+    "@type" : "owl:TransitiveProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links to a previous (older) revision of this Item or Post."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "earlier version"
+    },
+    "range" : "sioc:Item",
+    "inverseOf" : "sioc:later_version"
+  }, {
+    "@id" : "sioc:email",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An electronic mail address of the UserAccount."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "email"
+    }
+  }, {
+    "@id" : "sioc:email_sha1",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An electronic mail address of the UserAccount, encoded using SHA1."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "email sha1"
+    },
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "sioc:embeds_knowledge",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This links Items to embedded statements, facts and structured content."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "embeds knowledge"
+    },
+    "range" : "http://www.w3.org/2004/03/trix/rdfg-1/Graph"
+  }, {
+    "@id" : "sioc:feed",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A feed (e.g. RSS, Atom, etc.) pertaining to this resource (e.g. for a Forum, Site, UserAccount, etc.)."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "feed"
+    }
+  }, {
+    "@id" : "sioc:first_name",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "First (real) name of this User. Synonyms include given name or christian name."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "first name"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use foaf:name or foaf:firstName from the FOAF vocabulary instead."
+  }, {
+    "@id" : "sioc:follows",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Indicates that one UserAccount follows another UserAccount (e.g. for microblog posts or other content item updates)."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "follows"
+    },
+    "range" : "sioc:UserAccount"
+  }, {
+    "@id" : "sioc:function_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A UserAccount that has this Role."
+    },
+    "domain" : "sioc:Role",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "function of"
+    },
+    "inverseOf" : "sioc:has_function"
+  }, {
+    "@id" : "sioc:group_of",
+    "@type" : [ "owl:ObjectProperty", "owl:DeprecatedProperty" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "group of"
+    },
+    "inverseOf" : "sioc:has_group",
+    "versionInfo" : "This property has been renamed. Use sioc:usergroup_of instead."
+  }, {
+    "@id" : "sioc:has_administrator",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A UserAccount that is an administrator of this Site."
+    },
+    "domain" : "sioc:Site",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has administrator"
+    },
+    "range" : "sioc:UserAccount",
+    "inverseOf" : "sioc:administrator_of"
+  }, {
+    "@id" : "sioc:has_container",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The Container to which this Item belongs."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has container"
+    },
+    "range" : "sioc:Container",
+    "inverseOf" : "sioc:container_of"
+  }, {
+    "@id" : "sioc:has_creator",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This is the UserAccount that made this resource."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has creator"
+    },
+    "range" : "sioc:UserAccount",
+    "inverseOf" : "sioc:creator_of"
+  }, {
+    "@id" : "sioc:has_discussion",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The discussion that is related to this Item."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has discussion"
+    }
+  }, {
+    "@id" : "sioc:has_function",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Role that this UserAccount has."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has function"
+    },
+    "range" : "sioc:Role",
+    "inverseOf" : "sioc:function_of"
+  }, {
+    "@id" : "sioc:has_group",
+    "@type" : [ "owl:ObjectProperty", "owl:DeprecatedProperty" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "has group"
+    },
+    "inverseOf" : "sioc:group_of",
+    "versionInfo" : "This property has been renamed. Use sioc:has_usergroup instead."
+  }, {
+    "@id" : "sioc:has_host",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The Site that hosts this Forum."
+    },
+    "domain" : "sioc:Forum",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has host"
+    },
+    "range" : "sioc:Site",
+    "inverseOf" : "sioc:host_of"
+  }, {
+    "@id" : "sioc:has_member",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A UserAccount that is a member of this Usergroup."
+    },
+    "domain" : "sioc:Usergroup",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has member"
+    },
+    "range" : "sioc:UserAccount",
+    "inverseOf" : "sioc:member_of"
+  }, {
+    "@id" : "sioc:has_moderator",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A UserAccount that is a moderator of this Forum."
+    },
+    "domain" : "sioc:Forum",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has moderator"
+    },
+    "range" : "sioc:UserAccount"
+  }, {
+    "@id" : "sioc:has_modifier",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A UserAccount that modified this Item."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has modifier"
+    },
+    "range" : "sioc:UserAccount",
+    "inverseOf" : "sioc:modifier_of"
+  }, {
+    "@id" : "sioc:has_owner",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A UserAccount that this resource is owned by."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has owner"
+    },
+    "range" : "sioc:UserAccount",
+    "inverseOf" : "sioc:owner_of"
+  }, {
+    "@id" : "sioc:has_parent",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Container or Forum that this Container or Forum is a child of."
+    },
+    "domain" : "sioc:Container",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has parent"
+    },
+    "range" : "sioc:Container",
+    "inverseOf" : "sioc:parent_of"
+  }, {
+    "@id" : "sioc:has_part",
+    "@type" : [ "owl:ObjectProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An resource that is a part of this subject."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has part"
+    },
+    "inverseOf" : "sioc:part_of",
+    "versionInfo" : "This property is deprecated. Use dcterms:hasPart from the Dublin Core ontology instead."
+  }, {
+    "@id" : "sioc:has_reply",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Points to an Item or Post that is a reply or response to this Item or Post."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has reply"
+    },
+    "range" : "sioc:Item",
+    "subPropertyOf" : "sioc:related_to",
+    "inverseOf" : "sioc:reply_of"
+  }, {
+    "@id" : "sioc:has_scope",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A resource that this Role applies to."
+    },
+    "domain" : "sioc:Role",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has scope"
+    },
+    "inverseOf" : "sioc:scope_of"
+  }, {
+    "@id" : "sioc:has_space",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A data Space which this resource is a part of."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has space"
+    },
+    "range" : "sioc:Space",
+    "inverseOf" : "sioc:space_of"
+  }, {
+    "@id" : "sioc:has_subscriber",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A UserAccount that is subscribed to this Container."
+    },
+    "domain" : "sioc:Container",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has subscriber"
+    },
+    "range" : "sioc:UserAccount",
+    "seeAlso" : "sioc:feed",
+    "inverseOf" : "sioc:subscriber_of"
+  }, {
+    "@id" : "sioc:has_usergroup",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Points to a Usergroup that has certain access to this Space."
+    },
+    "domain" : "sioc:Space",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "has usergroup"
+    },
+    "range" : "sioc:Usergroup",
+    "inverseOf" : "sioc:usergroup_of"
+  }, {
+    "@id" : "sioc:host_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Forum that is hosted on this Site."
+    },
+    "domain" : "sioc:Site",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "host of"
+    },
+    "range" : "sioc:Forum",
+    "inverseOf" : "sioc:has_host"
+  }, {
+    "@id" : "sioc:id",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An identifier of a SIOC concept instance. For example, a user ID. Must be unique for instances of each type of SIOC concept within the same site."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "id"
+    },
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "sioc:ip_address",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The IP address used when creating this Item. This can be associated with a creator. Some wiki articles list the IP addresses for the creator or modifiers when the usernames are absent."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "ip address"
+    },
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "sioc:last_activity_date",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The date and time of the last activity associated with a SIOC concept instance, and expressed in ISO 8601 format. This could be due to a reply Post or Comment, a modification to an Item, etc."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "last activity date"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : "dcterms:date"
+  }, {
+    "@id" : "sioc:last_item_date",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The date and time of the last Post (or Item) in a Forum (or a Container), in ISO 8601 format."
+    },
+    "domain" : "sioc:Container",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "last item date"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : "dcterms:date"
+  }, {
+    "@id" : "sioc:last_name",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Last (real) name of this user. Synonyms include surname or family name."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "last name"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use foaf:name or foaf:surname from the FOAF vocabulary instead."
+  }, {
+    "@id" : "sioc:last_reply_date",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The date and time of the last reply Post or Comment, which could be associated with a starter Item or Post or with a Thread, and expressed in ISO 8601 format."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "last reply date"
+    },
+    "range" : "rdfs:Literal",
+    "subPropertyOf" : "dcterms:date"
+  }, {
+    "@id" : "sioc:later_version",
+    "@type" : "owl:TransitiveProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links to a later (newer) revision of this Item or Post."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "later version"
+    },
+    "range" : "sioc:Item",
+    "inverseOf" : "sioc:earlier_version"
+  }, {
+    "@id" : "sioc:latest_version",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links to the latest revision of this Item or Post."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "latest version"
+    },
+    "range" : "sioc:Item"
+  }, {
+    "@id" : "sioc:link",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A URI of a document which contains this SIOC object."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "link"
+    }
+  }, {
+    "@id" : "sioc:links_to",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links extracted from hyperlinks within a SIOC concept, e.g. Post or Site."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "links to"
+    },
+    "subPropertyOf" : "dcterms:references"
+  }, {
+    "@id" : "sioc:member_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Usergroup that this UserAccount is a member of."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "member of"
+    },
+    "range" : "sioc:Usergroup",
+    "inverseOf" : "sioc:has_member"
+  }, {
+    "@id" : "sioc:moderator_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Forum that a UserAccount is a moderator of."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "moderator of"
+    },
+    "range" : "sioc:Forum",
+    "inverseOf" : "sioc:has_moderator"
+  }, {
+    "@id" : "sioc:modified_at",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "When this was modified, in ISO 8601 format."
+    },
+    "domain" : "sioc:Post",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "modified at"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use dcterms:modified from the Dublin Core ontology instead."
+  }, {
+    "@id" : "sioc:modifier_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An Item that this UserAccount has modified."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "modifier of"
+    },
+    "range" : "sioc:Item",
+    "inverseOf" : "sioc:has_modifier"
+  }, {
+    "@id" : "sioc:name",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The name of a SIOC concept instance, e.g. a username for a UserAccount, group name for a Usergroup, etc."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "name"
+    },
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "sioc:next_by_date",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Next Item or Post in a given Container sorted by date."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "next by date"
+    },
+    "range" : "sioc:Item",
+    "inverseOf" : "sioc:previous_by_date"
+  }, {
+    "@id" : "sioc:next_version",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links to the next revision of this Item or Post."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "next version"
+    },
+    "range" : "sioc:Item",
+    "subPropertyOf" : "sioc:later_version",
+    "inverseOf" : "sioc:previous_version"
+  }, {
+    "@id" : "sioc:note",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A note associated with this resource, for example, if it has been edited by a UserAccount."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "note"
+    },
+    "range" : "rdfs:Literal"
+  }, {
+    "@id" : "sioc:num_authors",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The number of unique authors (UserAccounts and unregistered posters) who have contributed to this Item, Thread, Post, etc."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "num authors"
+    },
+    "range" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "@id" : "sioc:num_items",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The number of Posts (or Items) in a Forum (or a Container)."
+    },
+    "domain" : "sioc:Container",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "num items"
+    },
+    "range" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "@id" : "sioc:num_replies",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The number of replies that this Item, Thread, Post, etc. has. Useful for when the reply structure is absent."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "num replies"
+    },
+    "range" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "@id" : "sioc:num_threads",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The number of Threads (AKA discussion topics) in a Forum."
+    },
+    "domain" : "sioc:Forum",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "num threads"
+    },
+    "range" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "@id" : "sioc:num_views",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The number of times this Item, Thread, UserAccount profile, etc. has been viewed."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "num views"
+    },
+    "range" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  }, {
+    "@id" : "sioc:owner_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A resource owned by a particular UserAccount, for example, a weblog or image gallery."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "owner of"
+    },
+    "inverseOf" : "sioc:has_owner"
+  }, {
+    "@id" : "sioc:parent_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A child Container or Forum that this Container or Forum is a parent of."
+    },
+    "domain" : "sioc:Container",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "parent of"
+    },
+    "range" : "sioc:Container",
+    "inverseOf" : "sioc:has_parent"
+  }, {
+    "@id" : "sioc:part_of",
+    "@type" : [ "owl:ObjectProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A resource that the subject is a part of."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "part of"
+    },
+    "inverseOf" : "sioc:has_part",
+    "versionInfo" : "This property is deprecated. Use dcterms:isPartOf from the Dublin Core ontology instead."
+  }, {
+    "@id" : "sioc:previous_by_date",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Previous Item or Post in a given Container sorted by date."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "previous by date"
+    },
+    "range" : "sioc:Item",
+    "inverseOf" : "sioc:next_by_date"
+  }, {
+    "@id" : "sioc:previous_version",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links to the previous revision of this Item or Post."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "previous version"
+    },
+    "range" : "sioc:Item",
+    "subPropertyOf" : "sioc:earlier_version",
+    "inverseOf" : "sioc:next_version"
+  }, {
+    "@id" : "sioc:reference",
+    "@type" : [ "owl:ObjectProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links either created explicitly or extracted implicitly on the HTML level from the Post."
+    },
+    "domain" : "sioc:Post",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "reference"
+    },
+    "versionInfo" : "Renamed to sioc:links_to."
+  }, {
+    "@id" : "sioc:related_to",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Related Posts for this Post, perhaps determined implicitly from topics or references."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "related to"
+    }
+  }, {
+    "@id" : "sioc:reply_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Links to an Item or Post which this Item or Post is a reply to."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "reply of"
+    },
+    "range" : "sioc:Item",
+    "subPropertyOf" : "sioc:related_to",
+    "inverseOf" : "sioc:has_reply"
+  }, {
+    "@id" : "sioc:scope_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Role that has a scope of this resource."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "scope of"
+    },
+    "range" : "sioc:Role",
+    "inverseOf" : "sioc:has_scope"
+  }, {
+    "@id" : "sioc:sibling",
+    "@type" : "owl:SymmetricProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An Item may have a sibling or a twin that exists in a different Container, but the siblings may differ in some small way (for example, language, category, etc.). The sibling of this Item should be self-describing (that is, it should contain all available information)."
+    },
+    "domain" : "sioc:Item",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "sibling"
+    },
+    "range" : "sioc:Item"
+  }, {
+    "@id" : "sioc:space_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A resource which belongs to this data Space."
+    },
+    "domain" : "sioc:Space",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "space of"
+    },
+    "inverseOf" : "sioc:has_space"
+  }, {
+    "@id" : "sioc:subject",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Keyword(s) describing subject of the Post."
+    },
+    "domain" : "sioc:Post",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "subject"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use dcterms:subject from the Dublin Core ontology for text keywords and sioc:topic if the subject can be represented by a URI instead."
+  }, {
+    "@id" : "sioc:subscriber_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Container that a UserAccount is subscribed to."
+    },
+    "domain" : "sioc:UserAccount",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "subscriber of"
+    },
+    "range" : "sioc:Container",
+    "seeAlso" : "sioc:feed",
+    "inverseOf" : "sioc:has_subscriber"
+  }, {
+    "@id" : "sioc:title",
+    "@type" : [ "owl:DatatypeProperty", "owl:DeprecatedProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This is the title (subject line) of the Post. Note that for a Post within a threaded discussion that has no parents, it would detail the topic thread."
+    },
+    "domain" : "sioc:Post",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "title"
+    },
+    "range" : "rdfs:Literal",
+    "versionInfo" : "This property is deprecated. Use dcterms:title from the Dublin Core ontology instead."
+  }, {
+    "@id" : "sioc:topic",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A topic of interest, linking to the appropriate URI, e.g. in the Open Directory Project or of a SKOS category."
+    },
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "topic"
+    },
+    "subPropertyOf" : "dcterms:subject"
+  }, {
+    "@id" : "sioc:usergroup_of",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A Space that the Usergroup has access to."
+    },
+    "domain" : "sioc:Usergroup",
+    "isDefinedBy" : "http://rdfs.org/sioc/ns#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "usergroup of"
+    },
+    "range" : "sioc:Space",
+    "inverseOf" : "sioc:has_usergroup"
+  }, {
+    "@id" : "http://rdfs.org/sioc/spec",
+    "label" : "SIOC Core Ontology Specification"
+  }, {
+    "@id" : "foaf:Agent",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:Document",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:OnlineAccount",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:account",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "foaf:depiction",
+    "@type" : "owl:ObjectProperty"
+  } ],
+  "@context" : {
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "comment" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "label" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "versionInfo" : "http://www.w3.org/2002/07/owl#versionInfo",
+    "disjointWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
+      "@type" : "@id"
+    },
+    "equivalentClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "description" : "http://purl.org/dc/terms/description",
+    "title" : "http://purl.org/dc/terms/title",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "wot" : "http://xmlns.com/wot/0.1/",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "sioc" : "http://rdfs.org/sioc/ns#"
+  }
+}

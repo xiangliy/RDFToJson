@@ -1,0 +1,511 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":dayOfWeek"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":dayOfYear"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : ":unitType"
+  }, {
+    "@id" : "_:b11",
+    "@type" : "owl:Restriction",
+    "hasValue" : ":unitMonth",
+    "onProperty" : ":unitType"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":years"
+  }, {
+    "@id" : "_:b16",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : ":years"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "owl:Restriction",
+    "cardinality" : "0",
+    "onProperty" : ":seconds"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":minute"
+  }, {
+    "@id" : "_:b20",
+    "@type" : "owl:Restriction",
+    "owl:hasValue" : {
+      "@type" : "xsd:gMonth",
+      "@value" : "--01"
+    },
+    "onProperty" : ":month"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":months"
+  }, {
+    "@id" : "_:b23",
+    "@type" : "owl:Restriction",
+    "cardinality" : "0",
+    "onProperty" : ":months"
+  }, {
+    "@id" : "_:b25",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":weeks"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "owl:Restriction",
+    "cardinality" : "0",
+    "onProperty" : ":weeks"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":week"
+  }, {
+    "@id" : "_:b30",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":days"
+  }, {
+    "@id" : "_:b31",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":hours"
+  }, {
+    "@id" : "_:b33",
+    "@type" : "owl:Restriction",
+    "cardinality" : "0",
+    "onProperty" : ":days"
+  }, {
+    "@id" : "_:b37",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":minutes"
+  }, {
+    "@id" : "_:b38",
+    "@type" : "owl:Restriction",
+    "cardinality" : "0",
+    "onProperty" : ":hours"
+  }, {
+    "@id" : "_:b4",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":timeZone"
+  }, {
+    "@id" : "_:b41",
+    "@type" : "owl:Restriction",
+    "cardinality" : "0",
+    "onProperty" : ":minutes"
+  }, {
+    "@id" : "_:b42",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":seconds"
+  }, {
+    "@id" : "_:b5",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":day"
+  }, {
+    "@id" : "_:b6",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":hour"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":year"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":second"
+  }, {
+    "@id" : "_:b9",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "1",
+    "onProperty" : ":month"
+  }, {
+    "@id" : "http://www.w3.org/2006/time",
+    "@type" : "owl:Ontology",
+    "comment" : "\n      An OWL Ontology of Time (OWL-Time).\n    ",
+    "seeAlso" : "http://www.w3.org/TR/owl-time"
+  }, {
+    "@id" : ":DateTimeDescription",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "_:b0", "_:b1", "_:b2", "_:b3", "_:b4", "_:b5", "_:b6", "_:b7", "_:b8", "_:b9", "_:b10" ]
+  }, {
+    "@id" : ":DateTimeInterval",
+    "@type" : "owl:Class",
+    "subClassOf" : ":ProperInterval"
+  }, {
+    "@id" : ":DayOfWeek",
+    "@type" : "owl:Class",
+    "oneOf" : {
+      "@list" : [ ":Sunday", ":Monday", ":Tuesday", ":Wednesday", ":Thursday", ":Friday", ":Saturday" ]
+    }
+  }, {
+    "@id" : ":DurationDescription",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "_:b42", "_:b37", "_:b31", "_:b30", "_:b25", "_:b21", "_:b12" ]
+  }, {
+    "@id" : ":Friday",
+    "@type" : ":DayOfWeek"
+  }, {
+    "@id" : ":Instant",
+    "@type" : "owl:Class",
+    "subClassOf" : ":TemporalEntity"
+  }, {
+    "@id" : ":Interval",
+    "@type" : "owl:Class",
+    "subClassOf" : ":TemporalEntity"
+  }, {
+    "@id" : ":January",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "_:b20", "_:b11", ":DateTimeDescription" ]
+  }, {
+    "@id" : ":Monday",
+    "@type" : ":DayOfWeek"
+  }, {
+    "@id" : ":ProperInterval",
+    "@type" : "owl:Class",
+    "subClassOf" : ":Interval",
+    "disjointWith" : ":Instant"
+  }, {
+    "@id" : ":Saturday",
+    "@type" : ":DayOfWeek"
+  }, {
+    "@id" : ":Sunday",
+    "@type" : ":DayOfWeek"
+  }, {
+    "@id" : ":TemporalEntity",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ ":Instant", ":Interval" ]
+    }
+  }, {
+    "@id" : ":TemporalUnit",
+    "@type" : "owl:Class",
+    "oneOf" : {
+      "@list" : [ ":unitSecond", ":unitMinute", ":unitHour", ":unitDay", ":unitWeek", ":unitMonth", ":unitYear" ]
+    }
+  }, {
+    "@id" : ":Thursday",
+    "@type" : ":DayOfWeek"
+  }, {
+    "@id" : ":Tuesday",
+    "@type" : ":DayOfWeek"
+  }, {
+    "@id" : ":Wednesday",
+    "@type" : ":DayOfWeek"
+  }, {
+    "@id" : ":Year",
+    "@type" : "owl:Class",
+    "subClassOf" : [ "_:b19", "_:b41", "_:b38", "_:b33", "_:b27", "_:b23", "_:b16", ":DurationDescription" ]
+  }, {
+    "@id" : ":after",
+    "@type" : "owl:ObjectProperty",
+    "inverseOf" : ":before"
+  }, {
+    "@id" : ":before",
+    "@type" : [ "owl:TransitiveProperty", "owl:ObjectProperty" ],
+    "domain" : ":TemporalEntity",
+    "range" : ":TemporalEntity"
+  }, {
+    "@id" : ":day",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:gDay"
+  }, {
+    "@id" : ":dayOfWeek",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : ":DayOfWeek"
+  }, {
+    "@id" : ":dayOfYear",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:nonNegativeInteger"
+  }, {
+    "@id" : ":days",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DurationDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : ":hasBeginning",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":TemporalEntity",
+    "range" : ":Instant"
+  }, {
+    "@id" : ":hasDateTimeDescription",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":DateTimeInterval",
+    "range" : ":DateTimeDescription"
+  }, {
+    "@id" : ":hasDurationDescription",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":TemporalEntity",
+    "range" : ":DurationDescription"
+  }, {
+    "@id" : ":hasEnd",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":TemporalEntity",
+    "range" : ":Instant"
+  }, {
+    "@id" : ":hour",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:nonNegativeInteger"
+  }, {
+    "@id" : ":hours",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DurationDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : ":inDateTime",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":Instant",
+    "range" : ":DateTimeDescription"
+  }, {
+    "@id" : ":inXSDDateTime",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":Instant",
+    "range" : "xsd:dateTime"
+  }, {
+    "@id" : ":inside",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":Interval",
+    "range" : ":Instant"
+  }, {
+    "@id" : ":intervalAfter",
+    "@type" : "owl:ObjectProperty",
+    "inverseOf" : ":intervalBefore"
+  }, {
+    "@id" : ":intervalBefore",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":ProperInterval",
+    "range" : ":ProperInterval",
+    "subPropertyOf" : ":before"
+  }, {
+    "@id" : ":intervalContains",
+    "@type" : "owl:ObjectProperty",
+    "inverseOf" : ":intervalDuring"
+  }, {
+    "@id" : ":intervalDuring",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":ProperInterval",
+    "range" : ":ProperInterval"
+  }, {
+    "@id" : ":intervalEquals",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":ProperInterval",
+    "range" : ":ProperInterval"
+  }, {
+    "@id" : ":intervalFinishedBy",
+    "@type" : "owl:ObjectProperty",
+    "inverseOf" : ":intervalFinishes"
+  }, {
+    "@id" : ":intervalFinishes",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":ProperInterval",
+    "range" : ":ProperInterval"
+  }, {
+    "@id" : ":intervalMeets",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":ProperInterval",
+    "range" : ":ProperInterval"
+  }, {
+    "@id" : ":intervalMetBy",
+    "@type" : "owl:ObjectProperty",
+    "inverseOf" : ":intervalMeets"
+  }, {
+    "@id" : ":intervalOverlappedBy",
+    "@type" : "owl:ObjectProperty",
+    "inverseOf" : ":intervalOverlaps"
+  }, {
+    "@id" : ":intervalOverlaps",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":ProperInterval",
+    "range" : ":ProperInterval"
+  }, {
+    "@id" : ":intervalStartedBy",
+    "@type" : "owl:ObjectProperty",
+    "inverseOf" : ":intervalStarts"
+  }, {
+    "@id" : ":intervalStarts",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":ProperInterval",
+    "range" : ":ProperInterval"
+  }, {
+    "@id" : ":minute",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:nonNegativeInteger"
+  }, {
+    "@id" : ":minutes",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DurationDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : ":month",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:gMonth"
+  }, {
+    "@id" : ":months",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DurationDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : ":second",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : ":seconds",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DurationDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : ":timeZone",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "tzont:TimeZone"
+  }, {
+    "@id" : ":unitDay",
+    "@type" : ":TemporalUnit"
+  }, {
+    "@id" : ":unitHour",
+    "@type" : ":TemporalUnit"
+  }, {
+    "@id" : ":unitMinute",
+    "@type" : ":TemporalUnit"
+  }, {
+    "@id" : ":unitMonth",
+    "@type" : ":TemporalUnit"
+  }, {
+    "@id" : ":unitSecond",
+    "@type" : ":TemporalUnit"
+  }, {
+    "@id" : ":unitType",
+    "@type" : "owl:ObjectProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : ":TemporalUnit"
+  }, {
+    "@id" : ":unitWeek",
+    "@type" : ":TemporalUnit"
+  }, {
+    "@id" : ":unitYear",
+    "@type" : ":TemporalUnit"
+  }, {
+    "@id" : ":week",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:nonNegativeInteger"
+  }, {
+    "@id" : ":weeks",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DurationDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : ":xsdDateTime",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeInterval",
+    "range" : "xsd:dateTime"
+  }, {
+    "@id" : ":year",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DateTimeDescription",
+    "range" : "xsd:gYear"
+  }, {
+    "@id" : ":years",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : ":DurationDescription",
+    "range" : "xsd:decimal"
+  }, {
+    "@id" : "tzont:TimeZone",
+    "@type" : "owl:Class"
+  } ],
+  "@context" : {
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "hasValue" : {
+      "@id" : "http://www.w3.org/2002/07/owl#hasValue",
+      "@type" : "@id"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "maxCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#maxCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "comment" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "cardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "disjointWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
+      "@type" : "@id"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "unionOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#unionOf",
+      "@type" : "@id"
+    },
+    "oneOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#oneOf",
+      "@type" : "@id"
+    },
+    "" : "http://www.w3.org/2006/time#",
+    "tzont" : "http://www.w3.org/2006/timezone#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "time" : "http://www.w3.org/2006/time#"
+  }
+}

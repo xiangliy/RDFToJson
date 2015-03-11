@@ -1,0 +1,351 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "homepage" : "http://www.cwi.nl/~lynda/",
+    "name" : "Lynda Hardman"
+  }, {
+    "@id" : "_:b1",
+    "homepage" : "http://www.cwi.nl/~troncy/",
+    "name" : "Raphaël Troncy"
+  }, {
+    "@id" : "_:b2",
+    "homepage" : "http://aeshin.org/",
+    "name" : "Ryan Shaw"
+  }, {
+    "@id" : "_:b3",
+    "@type" : "dcterm:IMT",
+    "value" : "text/html",
+    "label" : {
+      "@language" : "en",
+      "@value" : "HTML"
+    }
+  }, {
+    "@id" : "_:b4",
+    "@type" : "dcterm:IMT",
+    "value" : "application/rdf+xml",
+    "label" : {
+      "@language" : "en",
+      "@value" : "RDF/XML"
+    }
+  }, {
+    "@id" : "http://linkedevents.org/ontology/",
+    "@type" : "owl:Ontology",
+    "contributor" : [ "_:b1", "_:b0" ],
+    "creator" : "_:b2",
+    "date" : "2010-10-07",
+    "hasFormat" : [ "leo:rdfxml/", "leo:html/" ],
+    "identifier" : "http://linkedevents.org/ontology/2010-10-07/",
+    "isVersionOf" : "http://linkedevents.org/ontology/",
+    "issued" : "2009-10-07",
+    "modified" : "2010-10-07",
+    "rights" : "Copyright © 2010 Ryan Shaw",
+    "title" : {
+      "@language" : "en",
+      "@value" : "LODE: An ontology for Linking Open Descriptions of Events"
+    },
+    "preferredNamespacePrefix" : "lode",
+    "preferredNamespaceUri" : "http://linkedevents.org/ontology/",
+    "license" : "http://creativecommons.org/licenses/by-sa/3.0/",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "\nThis document describes an ontology for publishing descriptions of\nhistorical events as Linked Data, and for mapping between other\nevent-related vocabularies and ontologies."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "LODE: An ontology for Linking Open Descriptions of Events"
+    },
+    "versionInfo" : "2010-10-07"
+  }, {
+    "@id" : "leo:Event",
+    "@type" : "owl:Class",
+    "issued" : "2009-07-28",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "\nAn event consists of some temporal and spatial boundaries subjectively\nimposed on the flux of reality or imagination, that we wish to treat\nas an entity for the purposes of making statements about it. In\nparticular, we may wish to make statements that relate people, places,\nor things to an event."
+    }, {
+      "@language" : "en",
+      "@value" : "\nNote that, unlike some defintions of \"event,\" this definition does not\nspecify that an event involves a change of state, nor does it attempt\nto distinguish events from processes or states."
+    } ],
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Event"
+    },
+    "subClassOf" : [ "http://purl.org/NET/cidoc-crm/core#E2_Temporal_Entity", "dctype:Event" ],
+    "equivalentClass" : [ "http://purl.org/NET/c4dm/event.owl#Event", "http://www.loa-cnr.it/ontologies/DUL.owl#Event" ],
+    "definition" : {
+      "@language" : "en",
+      "@value" : "\n\"Something that happened,\" as might be reported in a news article or\nexplained by a historian."
+    }
+  }, {
+    "@id" : "leo:atPlace",
+    "@type" : "owl:ObjectProperty",
+    "issued" : "2009-07-28",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "\nThis property relates an event to some meaningful place, which may\nhave a name (e.g. \"Paris\") or may be defined relative to some other\nentity or entities (e.g. \"the unincorporated area between Carson and\nHarbor Gateway\"). An event may be related to more than one such\nplace."
+    },
+    "domain" : "leo:Event",
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "at place"
+    },
+    "range" : "http://www.loa-cnr.it/ontologies/DUL.owl#Place",
+    "subPropertyOf" : "http://www.loa-cnr.it/ontologies/DUL.owl#hasLocation",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "\na named or relatively specified place that is where\nan event happened."
+    }
+  }, {
+    "@id" : "leo:atTime",
+    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
+    "issued" : "2009-07-28",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "\nEquivalent definitions from other ontologies:\n\n* C4DM Event ontology: \"Relates an event to a time object, classifying\n  a time region (either instantaneous or having an extent).\""
+    }, {
+      "@language" : "en",
+      "@value" : "\nThis property relates an event to some subjectively imposed temporal\nboundaries, i.e. a span of time. An event can be related to only one\nsuch span of time."
+    } ],
+    "domain" : "leo:Event",
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "at time"
+    },
+    "range" : "time:TemporalEntity",
+    "subPropertyOf" : [ "http://www.loa-cnr.it/ontologies/DUL.owl#isObservableAt", "http://purl.org/NET/cidoc-crm/core#P4_has_time-span" ],
+    "equivalentProperty" : "http://purl.org/NET/c4dm/event.owl#time",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "\nan abstract instant or interval of\ntime that is when an event happened."
+    }
+  }, {
+    "@id" : "leo:circa",
+    "@type" : "owl:ObjectProperty",
+    "issued" : "2009-07-28",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "An temporal relation expressing nearness in time."
+    }, {
+      "@language" : "en",
+      "@value" : "\nThis property relates a span of time that cannot be precisely located\nin a chronological series to another span of time that can be\nprecisely located, thus asserting that the latter is an approximation\nof the former."
+    } ],
+    "domain" : "time:TemporalEntity",
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "circa"
+    },
+    "range" : "time:DateTimeInterval",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "\nan interval of time that can be\nprecisely described using calendar dates and clock times."
+    }
+  }, {
+    "@id" : "leo:html/",
+    "format" : "_:b3"
+  }, {
+    "@id" : "leo:illustrate",
+    "@type" : "owl:ObjectProperty",
+    "issued" : "2010-10-07",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "\nThis property relates any thing (typically a media object) to an event which it\nillustrates, documents or comments upon."
+    },
+    "domain" : "owl:Thing",
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "illustrate"
+    },
+    "range" : "leo:Event",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "\nan event illustrated by some thing (typically a media object)"
+    }
+  }, {
+    "@id" : "leo:inSpace",
+    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
+    "issued" : "2009-07-28",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "\nThis property relates an event to some subjectively imposed spatial\nboundaries, i.e. a region of space. An event can be related to only\none such region of space."
+    }, {
+      "@language" : "en",
+      "@value" : "\nNote that a statement that relates an event to a region of space using\nthis property only asserts that an event occurred somewhere within\nthe region and does not assert that it occurred everywhere within the\nregion."
+    } ],
+    "domain" : "leo:Event",
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "in space"
+    },
+    "range" : "wgs84:SpatialThing",
+    "subPropertyOf" : "http://www.loa-cnr.it/ontologies/DUL.owl#hasRegion",
+    "equivalentProperty" : "http://purl.org/NET/c4dm/event.owl#place",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "\nan abstract region of space (e.g. a\ngeospatial point or region) that is where an event happened."
+    }
+  }, {
+    "@id" : "leo:involved",
+    "@type" : "owl:ObjectProperty",
+    "issued" : "2009-07-28",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "\nThis property relates an event to any physical, social, or mental\nobject or substance. It does not imply any causal relationship or\ninfluence or any other kind of explanatory relationship such as\ncreation, destruction, etc."
+    },
+    "domain" : "leo:Event",
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "involved"
+    },
+    "range" : "http://www.loa-cnr.it/ontologies/DUL.owl#Object",
+    "equivalentProperty" : "http://www.loa-cnr.it/ontologies/DUL.owl#hasParticipant",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "\na (physical, social, or mental) object involved in\nan event."
+    }
+  }, {
+    "@id" : "leo:involvedAgent",
+    "@type" : "owl:ObjectProperty",
+    "issued" : "2009-07-28",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "\nThis property relates an event to anything with agency, such as a\n(legal or natural) person, a group, an organization, a computational\nagent, etc. It does not imply any causal relationship, influence,\nintentionality, etc."
+    },
+    "domain" : "leo:Event",
+    "isDefinedBy" : "http://linkedevents.org/ontology/",
+    "label" : {
+      "@language" : "en",
+      "@value" : "involved agent"
+    },
+    "range" : "http://www.loa-cnr.it/ontologies/DUL.owl#Agent",
+    "subPropertyOf" : "leo:involved",
+    "equivalentProperty" : "http://www.loa-cnr.it/ontologies/DUL.owl#involvesAgent",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "an agent involved in an event."
+    }
+  }, {
+    "@id" : "leo:rdfxml/",
+    "format" : "_:b4"
+  }, {
+    "@id" : "http://purl.org/NET/c4dm/event.owl#agent",
+    "subPropertyOf" : "leo:involvedAgent"
+  }, {
+    "@id" : "http://purl.org/NET/cidoc-crm/core#P11_had_participant",
+    "subPropertyOf" : "leo:involvedAgent"
+  }, {
+    "@id" : "http://purl.org/NET/cidoc-crm/core#P12_occurred_in_the_presence_of",
+    "subPropertyOf" : "leo:involved"
+  }, {
+    "@id" : "http://purl.org/NET/cidoc-crm/core#P7_took_place_at",
+    "subPropertyOf" : "leo:inSpace"
+  } ],
+  "@context" : {
+    "name" : "http://xmlns.com/foaf/0.1/name",
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage",
+      "@type" : "@id"
+    },
+    "hasFormat" : {
+      "@id" : "http://purl.org/dc/terms/hasFormat",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "date" : {
+      "@id" : "http://purl.org/dc/terms/date",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "preferredNamespaceUri" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+    "preferredNamespacePrefix" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+    "versionInfo" : "http://www.w3.org/2002/07/owl#versionInfo",
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "rights" : "http://purl.org/dc/terms/rights",
+    "comment" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "identifier" : "http://purl.org/dc/terms/identifier",
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://web.resource.org/cc/license",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "label" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "title" : "http://purl.org/dc/terms/title",
+    "isVersionOf" : {
+      "@id" : "http://purl.org/dc/terms/isVersionOf",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "@id"
+    },
+    "definition" : "http://www.w3.org/2004/02/skos/core#definition",
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "equivalentClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "equivalentProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentProperty",
+      "@type" : "@id"
+    },
+    "format" : {
+      "@id" : "http://purl.org/dc/terms/format",
+      "@type" : "@id"
+    },
+    "value" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#value",
+    "wgs84" : "http://www.w3.org/2003/01/geo/wgs84_pos#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "dcterm" : "http://purl.org/dc/terms/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "yago" : "http://dbpedia.org/class/yago/",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "ns1" : "http://web.resource.org/cc/",
+    "dbo" : "http://dbpedia.org/ontology/",
+    "geo" : "http://www.geonames.org/ontology#",
+    "geoR" : "http://www.mindswap.org/2003/owl/geo/geoRelations.owl#",
+    "umbel" : "http://umbel.org/umbel/sc/",
+    "dbp" : "http://dbpedia.org/property/",
+    "dbr" : "http://dbpedia.org/resource/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dctype" : "http://purl.org/dc/dcmitype/",
+    "leo" : "http://linkedevents.org/ontology/",
+    "ler" : "http://linkedevents.org/resource/",
+    "time" : "http://www.w3.org/2006/time#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

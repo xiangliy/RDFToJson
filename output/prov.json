@@ -1,0 +1,2589 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b11",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "prov:pairEntity"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "prov:pairKey"
+  }, {
+    "@id" : "_:b18",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "prov:insertedKeyEntityPair"
+  }, {
+    "@id" : "_:b27",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Activity", "prov:Agent", "prov:Entity" ]
+    }
+  }, {
+    "@id" : "_:b28",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Activity", "prov:Agent", "prov:Entity" ]
+    }
+  }, {
+    "@id" : "_:b3",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "prov:dictionary"
+  }, {
+    "@id" : "_:b41",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Activity", "prov:Agent", "prov:Entity" ]
+    }
+  }, {
+    "@id" : "_:b43",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Association", "prov:InstantaneousEvent" ]
+    }
+  }, {
+    "@id" : "_:b5",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Delegation", "prov:Derivation", "prov:End", "prov:Start" ]
+    }
+  }, {
+    "@id" : "_:b50",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Activity", "prov:Agent", "prov:Entity", "prov:InstantaneousEvent" ]
+    }
+  }, {
+    "@id" : "_:b53",
+    "@type" : "owl:Restriction",
+    "maxCardinality" : "0",
+    "onProperty" : "prov:hadActivity"
+  }, {
+    "@id" : "_:b57",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Activity", "prov:Agent", "prov:Entity" ]
+    }
+  }, {
+    "@id" : "_:b59",
+    "@type" : "owl:Restriction",
+    "cardinality" : "1",
+    "onProperty" : "prov:dictionary"
+  }, {
+    "@id" : "_:b60",
+    "@type" : "owl:Axiom",
+    "comment" : "Derivation is a particular case of trace (see http://www.w3.org/TR/prov-dm/#term-trace), since it links an entity to another entity that contributed to its existence.",
+    "annotatedProperty" : "rdfs:subPropertyOf",
+    "annotatedSource" : "prov:wasDerivedFrom",
+    "annotatedTarget" : "prov:wasInfluencedBy"
+  }, {
+    "@id" : "_:b65",
+    "@type" : "owl:Restriction",
+    "minCardinality" : "1",
+    "onProperty" : "prov:removedKey"
+  }, {
+    "@id" : "_:b66",
+    "@type" : "owl:Axiom",
+    "comment" : "Attribution is a particular case of trace (see http://www.w3.org/TR/prov-dm/#concept-trace), in the sense that it links an entity to the agent that ascribed it.",
+    "annotatedProperty" : "rdfs:subPropertyOf",
+    "annotatedSource" : "prov:wasAttributedTo",
+    "annotatedTarget" : "prov:wasInfluencedBy",
+    "definition" : "IF wasAttributedTo(e2,ag1,aAttr) holds, THEN wasInfluencedBy(e2,ag1) also holds. "
+  }, {
+    "@id" : "_:b68",
+    "@type" : "owl:Axiom",
+    "comment" : "hadPrimarySource property is a particular case of wasDerivedFrom (see http://www.w3.org/TR/prov-dm/#term-original-source) that aims to give credit to the source that originated some information.",
+    "annotatedProperty" : "rdfs:subPropertyOf",
+    "annotatedSource" : "prov:hadPrimarySource",
+    "annotatedTarget" : "prov:wasDerivedFrom"
+  }, {
+    "@id" : "_:b69",
+    "@type" : "owl:Axiom",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections."
+    },
+    "annotatedProperty" : "rdfs:range",
+    "annotatedSource" : "prov:hadMember",
+    "annotatedTarget" : "prov:Entity",
+    "prov:dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-collection"
+  }, {
+    "@id" : "_:b70",
+    "@type" : "owl:Class",
+    "unionOf" : {
+      "@list" : [ "prov:Activity", "prov:Agent", "prov:Entity" ]
+    }
+  }, {
+    "@id" : "_:b71",
+    "@type" : "owl:Axiom",
+    "annotatedProperty" : "rdfs:range",
+    "annotatedSource" : "prov:wasInfluencedBy",
+    "annotatedTarget" : "_:b57",
+    "definition" : "influencer: an identifier (o1) for an ancestor entity, activity, or agent that the former depends on;",
+    "prov:dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence"
+  }, {
+    "@id" : "_:b72",
+    "@type" : "owl:Axiom",
+    "comment" : "Revision is a derivation (see http://www.w3.org/TR/prov-dm/#term-Revision). Moreover, according to \nhttp://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 2012 'wasRevisionOf is a strict sub-relation of wasDerivedFrom since two entities e2 and e1 may satisfy wasDerivedFrom(e2,e1) without being a variant of each other.'",
+    "annotatedProperty" : "rdfs:subPropertyOf",
+    "annotatedSource" : "prov:wasRevisionOf",
+    "annotatedTarget" : "prov:wasDerivedFrom"
+  }, {
+    "@id" : "_:b73",
+    "@type" : "owl:Axiom",
+    "annotatedProperty" : "rdfs:domain",
+    "annotatedSource" : "prov:wasInfluencedBy",
+    "annotatedTarget" : "_:b70",
+    "definition" : "influencee: an identifier (o2) for an entity, activity, or agent; ",
+    "prov:dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence"
+  }, {
+    "@id" : "_:b8",
+    "@type" : "owl:Axiom",
+    "comment" : "Quotation is a particular case of derivation (see http://www.w3.org/TR/prov-dm/#term-quotation) in which an entity is derived from an original entity by copying, or \"quoting\", some or all of it. ",
+    "annotatedProperty" : "rdfs:subPropertyOf",
+    "annotatedSource" : "prov:wasQuotedFrom",
+    "annotatedTarget" : "prov:wasDerivedFrom"
+  }, {
+    "@id" : "rdfs:comment",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : ""
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ]
+  }, {
+    "@id" : "rdfs:isDefinedBy",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "rdfs:label",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : ""
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ]
+  }, {
+    "@id" : "rdfs:seeAlso",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : ""
+    }
+  }, {
+    "@id" : "owl:Thing",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "owl:topObjectProperty",
+    "@type" : "owl:ObjectProperty"
+  }, {
+    "@id" : "owl:versionInfo",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov#",
+    "@type" : "owl:Ontology",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).\n\nIf you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/\nArchives/Public/public-prov-comments/). All feedback is welcome."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov",
+    "label" : {
+      "@language" : "en",
+      "@value" : "W3C PROVenance Interchange"
+    },
+    "seeAlso" : "http://www.w3.org/TR/prov-overview/",
+    "imports" : [ "http://www.w3.org/ns/prov-dictionary#", "http://www.w3.org/ns/prov-o#", "http://www.w3.org/ns/prov-dc#", "http://www.w3.org/ns/prov-links#", "http://www.w3.org/ns/prov-o-inverses#", "http://www.w3.org/ns/prov-aq#" ],
+    "versionIRI" : "http://www.w3.org/ns/prov-20130430",
+    "wasDerivedFrom" : [ "http://www.w3.org/ns/prov-links#", "http://www.w3.org/ns/prov-dictionary#", "http://www.w3.org/ns/prov-aq#", "http://www.w3.org/ns/prov-dc#", "http://www.w3.org/ns/prov-o-inverses#", "http://www.w3.org/ns/prov-o#" ],
+    "wasRevisionOf" : "http://www.w3.org/ns/prov-20130312"
+  }, {
+    "@id" : "prov:Accept",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Accept"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the acceptance of a resource (e.g., an article in a conference)"
+    }
+  }, {
+    "@id" : "prov:Activity",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Activity",
+    "disjointWith" : "prov:Entity",
+    "category" : "starting-point",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : "An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.",
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity"
+  }, {
+    "@id" : "prov:ActivityInfluence",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "It is not recommended that the type ActivityInfluence be asserted without also asserting one of its more specific subclasses."
+    }, {
+      "@language" : "en",
+      "@value" : "ActivityInfluence provides additional descriptions of an Activity's binary influence upon any other kind of resource. Instances of ActivityInfluence use the prov:activity property to cite the influencing Activity."
+    } ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "ActivityInfluence",
+    "seeAlso" : "prov:activity",
+    "subClassOf" : [ "_:b53", "prov:Influence" ],
+    "disjointWith" : "prov:EntityInfluence",
+    "category" : "qualified",
+    "editorsDefinition" : {
+      "@language" : "en",
+      "@value" : "ActivitiyInfluence is the capacity of an activity to have an effect on the character, development, or behavior of another by means of generation, invalidation, communication, or other."
+    }
+  }, {
+    "@id" : "prov:Agent",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Agent",
+    "disjointWith" : "prov:InstantaneousEvent",
+    "category" : "starting-point",
+    "component" : "agents-responsibility",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"
+  }, {
+    "@id" : "prov:AgentInfluence",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "It is not recommended that the type AgentInfluence be asserted without also asserting one of its more specific subclasses."
+    }, {
+      "@language" : "en",
+      "@value" : "AgentInfluence provides additional descriptions of an Agent's binary influence upon any other kind of resource. Instances of AgentInfluence use the prov:agent property to cite the influencing Agent."
+    } ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "AgentInfluence",
+    "seeAlso" : "prov:agent",
+    "subClassOf" : "prov:Influence",
+    "category" : "qualified",
+    "editorsDefinition" : {
+      "@language" : "en",
+      "@value" : "AgentInfluence is the capacity of an agent to have an effect on the character, development, or behavior of another by means of attribution, association, delegation, or other."
+    }
+  }, {
+    "@id" : "prov:Association",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Association provides additional descriptions about the binary prov:wasAssociatedWith relation from an prov:Activity to some prov:Agent that had some responsiblity for it. For example, :baking prov:wasAssociatedWith :baker; prov:qualifiedAssociation [ a prov:Association; prov:agent :baker; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Association",
+    "subClassOf" : "prov:AgentInfluence",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "An activity association is an assignment of responsibility to an agent for an activity, indicating that the agent had a role in the activity. It further allows for a plan to be specified, which is the plan intended by the agent to achieve some goals in the context of this activity."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Association",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Association",
+    "unqualifiedForm" : "prov:wasAssociatedWith"
+  }, {
+    "@id" : "prov:Attribution",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Attribution provides additional descriptions about the binary prov:wasAttributedTo relation from an prov:Entity to some prov:Agent that had some responsible for it. For example, :cake prov:wasAttributedTo :baker; prov:qualifiedAttribution [ a prov:Attribution; prov:entity :baker; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Attribution",
+    "subClassOf" : "prov:AgentInfluence",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Attribution is the ascribing of an entity to an agent.\n\nWhen an entity e is attributed to agent ag, entity e was generated by some unspecified activity that in turn was associated to agent ag. Thus, this relation is useful when the activity is not known, or irrelevant."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribution",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribution",
+    "unqualifiedForm" : "prov:wasAttributedTo"
+  }, {
+    "@id" : "prov:Bundle",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Note that there are kinds of bundles (e.g. handwritten letters, audio recordings, etc.) that are not expressed in PROV-O, but can be still be described by PROV-O."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Bundle",
+    "subClassOf" : "prov:Entity",
+    "category" : "expanded",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A bundle is a named set of provenance descriptions, and is itself an Entity, so allowing provenance of provenance to be expressed."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-bundle-entity",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-bundle-declaration"
+  }, {
+    "@id" : "prov:Collection",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Collection",
+    "subClassOf" : "prov:Entity",
+    "category" : "expanded",
+    "component" : "collections",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-collection"
+  }, {
+    "@id" : "prov:Communication",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Communication provides additional descriptions about the binary prov:wasInformedBy relation from an informed prov:Activity to the prov:Activity that informed it. For example, :you_jumping_off_bridge prov:wasInformedBy :everyone_else_jumping_off_bridge; prov:qualifiedCommunication [ a prov:Communication; prov:activity :everyone_else_jumping_off_bridge; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Communication",
+    "subClassOf" : "prov:ActivityInfluence",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : "Communication is the exchange of an entity by two activities, one activity using the entity generated by the other.",
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Communication",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-wasInformedBy",
+    "unqualifiedForm" : "prov:wasInformedBy"
+  }, {
+    "@id" : "prov:Contribute",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Contribute\n"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies any contribution of an agent to a resource. "
+    }
+  }, {
+    "@id" : "prov:Contributor",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Contributor"
+    },
+    "subClassOf" : "prov:Role",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Role with the function of having responsibility for making contributions to a resource. The Agent assigned to this role is associated with a Modify or Create Activities"
+    }
+  }, {
+    "@id" : "prov:Copyright",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Copyright"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the Copyrighting activity associated to a resource."
+    }
+  }, {
+    "@id" : "prov:Create",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Create"
+    },
+    "subClassOf" : "prov:Contribute",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the creation of a resource"
+    }
+  }, {
+    "@id" : "prov:Creator",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Creator"
+    },
+    "subClassOf" : "prov:Contributor",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Role with the function of creating a resource. The Agent assigned to this role is associated with a Create Activity"
+    }
+  }, {
+    "@id" : "prov:Delegation",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Delegation provides additional descriptions about the binary prov:actedOnBehalfOf relation from a performing prov:Agent to some prov:Agent for whom it was performed. For example, :mixing prov:wasAssociatedWith :toddler . :toddler prov:actedOnBehalfOf :mother; prov:qualifiedDelegation [ a prov:Delegation; prov:entity :mother; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Delegation",
+    "subClassOf" : "prov:AgentInfluence",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Delegation is the assignment of authority and responsibility to an agent (by itself or by another agent) to carry out a specific activity as a delegate or representative, while the agent it acts on behalf of retains some responsibility for the outcome of the delegated work.\n\nFor example, a student acted on behalf of his supervisor, who acted on behalf of the department chair, who acted on behalf of the university; all those agents are responsible in some way for the activity that took place but we do not say explicitly who bears responsibility and to what degree."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-delegation",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-delegation",
+    "unqualifiedForm" : "prov:actedOnBehalfOf"
+  }, {
+    "@id" : "prov:Derivation",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "An instance of prov:Derivation provides additional descriptions about the binary prov:wasDerivedFrom relation from some derived prov:Entity to another prov:Entity from which it was derived. For example, :chewed_bubble_gum prov:wasDerivedFrom :unwrapped_bubble_gum; prov:qualifiedDerivation [ a prov:Derivation; prov:entity :unwrapped_bubble_gum; :foo :bar ]."
+    }, {
+      "@language" : "en",
+      "@value" : "The more specific forms of prov:Derivation (i.e., prov:Revision, prov:Quotation, prov:PrimarySource) should be asserted if they apply."
+    } ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Derivation",
+    "subClassOf" : "prov:EntityInfluence",
+    "category" : "qualified",
+    "component" : "derivations",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Derivation",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#Derivation-Relation",
+    "unqualifiedForm" : "prov:wasDerivedFrom"
+  }, {
+    "@id" : "prov:Dictionary",
+    "@type" : "owl:Class",
+    "comment" : [ "This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays.", "A given dictionary forms a given structure for its members. A different structure (obtained either by insertion or removal of members) constitutes a different dictionary." ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "Dictionary",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "A dictionary is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the dictionary.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-conceptual-definition",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary"
+  }, {
+    "@id" : "prov:DirectQueryService",
+    "@type" : "owl:Class",
+    "comment" : "Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "ProvenanceService",
+    "subClassOf" : "prov:SoftwareAgent",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-query-service-discovery",
+    "category" : "access-and-query"
+  }, {
+    "@id" : "prov:EmptyCollection",
+    "@type" : [ "owl:NamedIndividual", "owl:Class" ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : {
+      "@language" : "en",
+      "@value" : "EmptyCollection"
+    },
+    "subClassOf" : "prov:Collection",
+    "category" : "expanded",
+    "component" : "collections",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "An empty collection is a collection without members."
+    }
+  }, {
+    "@id" : "prov:EmptyDictionary",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "Empty Dictionary",
+    "subClassOf" : [ "prov:Dictionary", "prov:EmptyCollection" ],
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "An empty dictionary (i.e. has no members).",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-conceptual-definition",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary"
+  }, {
+    "@id" : "prov:End",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:End provides additional descriptions about the binary prov:wasEndedBy relation from some ended prov:Activity to an prov:Entity that ended it. For example, :ball_game prov:wasEndedBy :buzzer; prov:qualifiedEnd [ a prov:End; prov:entity :buzzer; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "End",
+    "subClassOf" : [ "prov:EntityInfluence", "prov:InstantaneousEvent" ],
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "End is when an activity is deemed to have been ended by an entity, known as trigger. The activity no longer exists after its end. Any usage, generation, or invalidation involving an activity precedes the activity's end. An end may refer to a trigger entity that terminated the activity, or to an activity, known as ender that generated the trigger."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-End",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-End",
+    "unqualifiedForm" : "prov:wasEndedBy"
+  }, {
+    "@id" : "prov:Entity",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Entity",
+    "disjointWith" : "prov:InstantaneousEvent",
+    "category" : "starting-point",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary. "
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-entity",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Entity"
+  }, {
+    "@id" : "prov:EntityInfluence",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "It is not recommended that the type EntityInfluence be asserted without also asserting one of its more specific subclasses."
+    }, {
+      "@language" : "en",
+      "@value" : "EntityInfluence provides additional descriptions of an Entity's binary influence upon any other kind of resource. Instances of EntityInfluence use the prov:entity property to cite the influencing Entity."
+    } ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "EntityInfluence",
+    "seeAlso" : "prov:entity",
+    "subClassOf" : "prov:Influence",
+    "category" : "qualified",
+    "editorsDefinition" : {
+      "@language" : "en",
+      "@value" : "EntityInfluence is the capacity of an entity to have an effect on the character, development, or behavior of another by means of usage, start, end, derivation, or other. "
+    }
+  }, {
+    "@id" : "prov:Generation",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Generation provides additional descriptions about the binary prov:wasGeneratedBy relation from a generated prov:Entity to the prov:Activity that generated it. For example, :cake prov:wasGeneratedBy :baking; prov:qualifiedGeneration [ a prov:Generation; prov:activity :baking; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Generation",
+    "subClassOf" : [ "prov:ActivityInfluence", "prov:InstantaneousEvent" ],
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Generation is the completion of production of a new entity by an activity. This entity did not exist before generation and becomes available for usage after this generation."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Generation",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Generation",
+    "unqualifiedForm" : "prov:wasGeneratedBy"
+  }, {
+    "@id" : "prov:Influence",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable."
+    }, {
+      "@language" : "en",
+      "@value" : "Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable."
+    } ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Influence",
+    "category" : "qualified",
+    "component" : "derivations",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Influence is the capacity of an entity, activity, or agent to have an effect on the character, development, or behavior of another by means of usage, start, end, generation, invalidation, communication, derivation, attribution, association, or delegation."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-influence",
+    "unqualifiedForm" : "prov:wasInfluencedBy"
+  }, {
+    "@id" : "prov:Insertion",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "Insertion",
+    "subClassOf" : [ "_:b59", "_:b18", "prov:Derivation" ],
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "Insertion is a derivation that describes the transformation of a dictionary into another, by insertion of one or more key-entity pairs.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion",
+    "unqualifiedForm" : "prov:derivedByInsertionFrom"
+  }, {
+    "@id" : "prov:InstantaneousEvent",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "InstantaneousEvent",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#dfn-event",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics."
+    }
+  }, {
+    "@id" : "prov:Invalidation",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Invalidation provides additional descriptions about the binary prov:wasInvalidatedBy relation from an invalidated prov:Entity to the prov:Activity that invalidated it. For example, :uncracked_egg prov:wasInvalidatedBy :baking; prov:qualifiedInvalidation [ a prov:Invalidation; prov:activity :baking; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Invalidation",
+    "subClassOf" : [ "prov:ActivityInfluence", "prov:InstantaneousEvent" ],
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : "Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation.",
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Invalidation",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Invalidation",
+    "unqualifiedForm" : "prov:wasInvalidatedBy"
+  }, {
+    "@id" : "prov:KeyEntityPair",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "Key-Entity Pair",
+    "subClassOf" : [ "_:b11", "_:b12" ],
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "A key-entity pair. Part of a prov:Dictionary through prov:hadDictionaryMember. The key is any RDF Literal, the value is a prov:Entity.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership"
+  }, {
+    "@id" : "prov:Location",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Location",
+    "seeAlso" : "prov:atLocation",
+    "category" : "expanded",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-location",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribute"
+  }, {
+    "@id" : "prov:Modify",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Modify"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the modification of a resource. "
+    }
+  }, {
+    "@id" : "prov:Organization",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Organization",
+    "subClassOf" : "prov:Agent",
+    "category" : "expanded",
+    "component" : "agents-responsibility",
+    "definition" : "An organization is a social or legal institution such as a company, society, etc.",
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types"
+  }, {
+    "@id" : "prov:Person",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Person",
+    "subClassOf" : "prov:Agent",
+    "category" : "expanded",
+    "component" : "agents-responsibility",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Person agents are people."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types"
+  }, {
+    "@id" : "prov:Plan",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "There exist no prescriptive requirement on the nature of plans, their representation, the actions or steps they consist of, or their intended goals. Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Plan",
+    "subClassOf" : "prov:Entity",
+    "category" : [ "expanded", "qualified" ],
+    "component" : "agents-responsibility",
+    "definition" : "A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.",
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Association",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Association"
+  }, {
+    "@id" : "prov:PrimarySource",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:PrimarySource provides additional descriptions about the binary prov:hadPrimarySource relation from some secondary prov:Entity to an earlier, primary prov:Entity. For example, :blog prov:hadPrimarySource :newsArticle; prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :newsArticle; :foo :bar ] ."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "PrimarySource",
+    "subClassOf" : "prov:Derivation",
+    "category" : "qualified",
+    "component" : "derivations",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic's study, without benefit from hindsight.\n\nBecause of the directness of primary sources, they 'speak for themselves' in ways that cannot be captured through the filter of secondary sources. As such, it is important for secondary sources to reference those primary sources from which they were derived, so that their reliability can be investigated.\n\nA primary source relation is a particular case of derivation of secondary materials from their primary sources. It is recognized that the determination of primary sources can be up to interpretation, and should be done according to conventions accepted within the application's domain."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-primary-source",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-original-source",
+    "unqualifiedForm" : "prov:hadPrimarySource"
+  }, {
+    "@id" : "prov:Publish",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Publish"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the publication of a resource"
+    }
+  }, {
+    "@id" : "prov:Publisher",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Publisher"
+    },
+    "subClassOf" : "prov:Role",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Role with the function of publishing a resource. The Agent assigned to this role is associated with a Publish Activity"
+    }
+  }, {
+    "@id" : "prov:Quotation",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Quotation provides additional descriptions about the binary prov:wasQuotedFrom relation from some taken prov:Entity from an earlier, larger prov:Entity. For example, :here_is_looking_at_you_kid prov:wasQuotedFrom :casablanca_script; prov:qualifiedQuotation [ a prov:Quotation; prov:entity :casablanca_script; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Quotation",
+    "subClassOf" : "prov:Derivation",
+    "category" : "qualified",
+    "component" : "derivations",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A quotation is the repeat of (some or all of) an entity, such as text or image, by someone who may or may not be its original author. Quotation is a particular case of derivation."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-quotation",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-quotation",
+    "unqualifiedForm" : "prov:wasQuotedFrom"
+  }, {
+    "@id" : "prov:Removal",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "Removal",
+    "subClassOf" : [ "prov:Derivation", "_:b65", "_:b3" ],
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "Removal is a derivation that describes the transformation of a dictionary into another, by removing one or more keys.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal",
+    "unqualifiedForm" : "prov:derivedByRemovalFrom"
+  }, {
+    "@id" : "prov:Replace",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Replace"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the replacement of a resource."
+    }
+  }, {
+    "@id" : "prov:Revision",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Revision provides additional descriptions about the binary prov:wasRevisionOf relation from some newer prov:Entity to an earlier prov:Entity. For example, :draft_2 prov:wasRevisionOf :draft_1; prov:qualifiedRevision [ a prov:Revision; prov:entity :draft_1; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Revision",
+    "subClassOf" : "prov:Derivation",
+    "category" : "qualified",
+    "component" : "derivations",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-revision",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Revision",
+    "unqualifiedForm" : "prov:wasRevisionOf"
+  }, {
+    "@id" : "prov:RightsAssignment",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "RightsAssignment"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the rights assignment of a resource."
+    }
+  }, {
+    "@id" : "prov:RightsHolder",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "RightsHolder"
+    },
+    "subClassOf" : "prov:Role",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Role with the function of owning or managing rights over a resource. The Agent assigned to this role is associated with a RightsAssignment Activity"
+    }
+  }, {
+    "@id" : "prov:Role",
+    "@type" : "owl:Class",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Role",
+    "seeAlso" : "prov:hadRole",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-role",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribute"
+  }, {
+    "@id" : "prov:ServiceDescription",
+    "@type" : "owl:Class",
+    "comment" : "Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "ServiceDescription",
+    "subClassOf" : "prov:SoftwareAgent",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-query-service-discovery",
+    "category" : "access-and-query"
+  }, {
+    "@id" : "prov:SoftwareAgent",
+    "@type" : "owl:Class",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "label" : "SoftwareAgent",
+    "subClassOf" : [ "owl:Thing", "prov:Agent" ],
+    "category" : "expanded",
+    "component" : "agents-responsibility",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A software agent is running software."
+    },
+    "dm" : [ "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent", "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent" ],
+    "n" : [ "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types", "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-n.html#expression-types" ]
+  }, {
+    "@id" : "prov:Start",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Start provides additional descriptions about the binary prov:wasStartedBy relation from some started prov:Activity to an prov:Entity that started it. For example, :foot_race prov:wasStartedBy :bang; prov:qualifiedStart [ a prov:Start; prov:entity :bang; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ] ."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Start",
+    "subClassOf" : [ "prov:EntityInfluence", "prov:InstantaneousEvent" ],
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Start is when an activity is deemed to have been started by an entity, known as trigger. The activity did not exist before its start. Any usage, generation, or invalidation involving an activity follows the activity's start. A start may refer to a trigger entity that set off the activity, or to an activity, known as starter, that generated the trigger."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Start",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Start",
+    "unqualifiedForm" : "prov:wasStartedBy"
+  }, {
+    "@id" : "prov:Submit",
+    "@type" : "owl:Class",
+    "label" : {
+      "@language" : "en",
+      "@value" : "Submit"
+    },
+    "subClassOf" : "prov:Activity",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Activity that identifies the issuance (e.g., publication) of a resource. "
+    }
+  }, {
+    "@id" : "prov:Usage",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An instance of prov:Usage provides additional descriptions about the binary prov:used relation from some prov:Activity to an prov:Entity that it used. For example, :keynote prov:used :podium; prov:qualifiedUsage [ a prov:Usage; prov:entity :podium; :foo :bar ]."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "Usage",
+    "subClassOf" : [ "prov:InstantaneousEvent", "prov:EntityInfluence" ],
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Usage is the beginning of utilizing an entity by an activity. Before usage, the activity had not begun to utilize this entity and could not have been affected by the entity."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Usage",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Usage",
+    "unqualifiedForm" : "prov:used"
+  }, {
+    "@id" : "prov:actedOnBehalfOf",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An object property to express the accountability of an agent towards another agent. The subordinate agent acted on behalf of the responsible agent in an actual activity. "
+    },
+    "domain" : "prov:Agent",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "actedOnBehalfOf",
+    "range" : "prov:Agent",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedDelegation", "prov:agent" ]
+    },
+    "category" : "starting-point",
+    "component" : "agents-responsibility",
+    "inverse" : "hadDelegate",
+    "qualifiedForm" : [ "prov:qualifiedDelegation", "prov:Delegation" ]
+  }, {
+    "@id" : "prov:activity",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:ActivityInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "activity",
+    "range" : "prov:Activity",
+    "subPropertyOf" : "prov:influencer",
+    "category" : "qualified",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "This property behaves in spirit like rdf:object; it references the object of a prov:wasInfluencedBy triple."
+    },
+    "editorsDefinition" : "The prov:activity property references an prov:Activity which influenced a resource. This property applies to an prov:ActivityInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent.",
+    "inverse" : "activityOfInfluence"
+  }, {
+    "@id" : "prov:activityOfInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "activityOfInfluence",
+    "inverseOf" : "prov:activity"
+  }, {
+    "@id" : "prov:agent",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:AgentInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "agent",
+    "range" : "prov:Agent",
+    "subPropertyOf" : "prov:influencer",
+    "category" : "qualified",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "This property behaves in spirit like rdf:object; it references the object of a prov:wasInfluencedBy triple."
+    },
+    "editorsDefinition" : {
+      "@language" : "en",
+      "@value" : "The prov:agent property references an prov:Agent which influenced a resource. This property applies to an prov:AgentInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent."
+    },
+    "inverse" : "agentOfInfluence"
+  }, {
+    "@id" : "prov:agentOfInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "agentOfInfluence",
+    "inverseOf" : "prov:agent"
+  }, {
+    "@id" : "prov:alternateOf",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Entity",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov-o#", "http://www.w3.org/ns/prov.owl#" ],
+    "label" : "alternateOf",
+    "range" : "prov:Entity",
+    "seeAlso" : "prov:specializationOf",
+    "inverseOf" : "prov:alternateOf",
+    "category" : "expanded",
+    "component" : "alternate",
+    "constraints" : "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Two alternate entities present aspects of the same thing. These aspects may be the same or different, and the alternate entities may or may not overlap in time."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-alternate",
+    "inverse" : "alternateOf",
+    "n" : "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-alternate"
+  }, {
+    "@id" : "prov:aq",
+    "@type" : "owl:AnnotationProperty",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "prov:asInBundle",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "prov:asInBundle is used to specify which bundle the general entity of a prov:mentionOf property is described.\n\nWhen :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:asInBundle :b is also asserted to cite the Bundle in which :y was described."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-links#",
+    "label" : "asInBundle",
+    "range" : "prov:Bundle",
+    "inverse" : "contextOf",
+    "sharesDefinitionWith" : "prov:mentionOf"
+  }, {
+    "@id" : "prov:atLocation",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "The Location of any resource."
+    }, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ],
+    "domain" : "_:b50",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "atLocation",
+    "range" : "prov:Location",
+    "category" : "expanded",
+    "editorialNote" : [ {
+      "@language" : "en",
+      "@value" : "This property is not functional because the many values could be at a variety of granularies (In this building, in this room, in that chair)."
+    }, {
+      "@language" : "en",
+      "@value" : "The naming of prov:atLocation parallels prov:atTime, and is not named prov:hadLocation to avoid conflicting with the convention that prov:had* properties are used on prov:Influence classes."
+    } ],
+    "inverse" : "locationOf",
+    "sharesDefinitionWith" : "prov:Location"
+  }, {
+    "@id" : "prov:atTime",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The time at which an InstantaneousEvent occurred, in the form of xsd:dateTime."
+    },
+    "domain" : "prov:InstantaneousEvent",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "atTime",
+    "range" : "xsd:dateTime",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "sharesDefinitionWith" : "prov:InstantaneousEvent",
+    "unqualifiedForm" : [ "prov:invalidatedAtTime", "prov:startedAtTime", "prov:generatedAtTime", "prov:endedAtTime" ]
+  }, {
+    "@id" : "prov:category",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Classify prov-o terms into three categories, including 'starting-point', 'qualifed', and 'extended'. This classification is used by the prov-o html document to gently introduce prov-o terms to its users. "
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ]
+  }, {
+    "@id" : "prov:component",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Classify prov-o terms into six components according to prov-dm, including 'agents-responsibility', 'alternate', 'annotations', 'collections', 'derivations', and 'entities-activities'. This classification is used so that readers of prov-o specification can find its correspondence with the prov-dm specification."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ]
+  }, {
+    "@id" : "prov:constraints",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A reference to the principal section of the PROV-CONSTRAINTS document that describes this concept."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "prov:contributed",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "contributed",
+    "inverseOf" : "prov:wasAttributedTo"
+  }, {
+    "@id" : "prov:definition",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A definition quoted from PROV-DM or PROV-CONSTRAINTS that describes the concept expressed with this OWL term."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ]
+  }, {
+    "@id" : "prov:derivedByInsertionFrom",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Dictionary",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "derivedByInsertionFrom",
+    "range" : "prov:Dictionary",
+    "subPropertyOf" : "prov:wasDerivedFrom",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "The dictionary was derived from the other by insertion. Can be qualified with prov:qualifiedInsertion, which shows details of the insertion, in particular the inserted key-entity pairs.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion"
+  }, {
+    "@id" : "prov:derivedByRemovalFrom",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Dictionary",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "derivedByRemovalFrom",
+    "range" : "prov:Dictionary",
+    "subPropertyOf" : "prov:wasDerivedFrom",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "The dictionary was derived from the other by removal. Can be qualified with prov:qualifiedRemoval, which shows details of the removal, in particular the removed keys.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal"
+  }, {
+    "@id" : "prov:describesService",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "relates a generic provenance query service resource (type prov:ServiceDescription) to a specific query service description (e.g. a prov:DirectQueryService or a sd:Service)."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "describesService",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/rovenance-query-service-description",
+    "category" : "access-and-query",
+    "inverse" : "serviceDescribedBy"
+  }, {
+    "@id" : "prov:dictionary",
+    "@type" : "owl:ObjectProperty",
+    "domain" : [ "prov:Insertion", "prov:Removal" ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "dictionary",
+    "range" : "prov:Dictionary",
+    "subPropertyOf" : "prov:entity",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "The property used by a prov:Insertion and prov:Removal to cite the prov:Dictionary that was prov:derivedByInsertionFrom or prov:derivedByRemovalFrom another dictionary.",
+    "dm" : [ "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal", "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion" ],
+    "n" : [ "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal", "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion" ]
+  }, {
+    "@id" : "prov:dm",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A reference to the principal section of the PROV-DM document that describes this concept."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "prov:editorialNote",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A note by the OWL development team about how this term expresses the PROV-DM concept, or how it should be used in context of semantic web or linked data."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ]
+  }, {
+    "@id" : "prov:editorsDefinition",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "When the prov-o term does not have a definition drawn from prov-dm, and the prov-o editor provides one."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "prov:definition"
+  }, {
+    "@id" : "prov:ended",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "ended",
+    "inverseOf" : "prov:wasEndedBy"
+  }, {
+    "@id" : "prov:endedAtTime",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The time at which an activity ended. See also prov:startedAtTime."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "endedAtTime",
+    "range" : "xsd:dateTime",
+    "category" : "starting-point",
+    "component" : "entities-activities",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "It is the intent that the property chain holds: (prov:qualifiedEnd o prov:atTime) rdfs:subPropertyOf prov:endedAtTime."
+    },
+    "qualifiedForm" : [ "prov:End", "prov:atTime" ]
+  }, {
+    "@id" : "prov:entity",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:EntityInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "entity",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:influencer",
+    "category" : "qualified",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "This property behaves in spirit like rdf:object; it references the object of a prov:wasInfluencedBy triple."
+    },
+    "editorsDefinition" : "The prov:entity property references an prov:Entity which influenced a resource. This property applies to an prov:EntityInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent.",
+    "inverse" : "entityOfInfluence"
+  }, {
+    "@id" : "prov:entityOfInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "entityOfInfluence",
+    "inverseOf" : "prov:entity"
+  }, {
+    "@id" : "prov:generalizationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "generalizationOf",
+    "inverseOf" : "prov:specializationOf"
+  }, {
+    "@id" : "prov:generated",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Activity",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov.owl#", "http://www.w3.org/ns/prov-o#" ],
+    "label" : "generated",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:influenced",
+    "inverseOf" : "prov:wasGeneratedBy",
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "prov:generated is one of few inverse property defined, to allow Activity-oriented assertions in addition to Entity-oriented assertions."
+    },
+    "inverse" : "wasGeneratedBy",
+    "sharesDefinitionWith" : "prov:Generation"
+  }, {
+    "@id" : "prov:generatedAsDerivation",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "generatedAsDerivation",
+    "inverseOf" : "prov:hadGeneration"
+  }, {
+    "@id" : "prov:generatedAtTime",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The time at which an entity was completely created and is available for use."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "generatedAtTime",
+    "range" : "xsd:dateTime",
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "It is the intent that the property chain holds: (prov:qualifiedGeneration o prov:atTime) rdfs:subPropertyOf prov:generatedAtTime."
+    },
+    "qualifiedForm" : [ "prov:atTime", "prov:Generation" ]
+  }, {
+    "@id" : "prov:hadActivity",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "The _optional_ Activity of an Influence, which used, generated, invalidated, or was the responsibility of some Entity. This property is _not_ used by ActivityInfluence (use prov:activity instead)."
+    }, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ],
+    "domain" : [ "prov:Influence", "_:b5" ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "hadActivity",
+    "range" : "prov:Activity",
+    "category" : "qualified",
+    "component" : "derivations",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "The multiple rdfs:domain assertions are intended. One is simpler and works for OWL-RL, the union is more specific but is not recognized by OWL-RL."
+    },
+    "inverse" : "wasActivityOfInfluence",
+    "sharesDefinitionWith" : "prov:Activity"
+  }, {
+    "@id" : "prov:hadDelegate",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "hadDelegate",
+    "inverseOf" : "prov:actedOnBehalfOf"
+  }, {
+    "@id" : "prov:hadDerivation",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "hadDerivation",
+    "inverseOf" : "prov:wasDerivedFrom"
+  }, {
+    "@id" : "prov:hadDictionaryMember",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Dictionary",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "hadDictionaryMember",
+    "range" : "prov:KeyEntityPair",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "Describes the key-entity pair that was member of a prov:Dictionary. A dictionary can have multiple members.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership"
+  }, {
+    "@id" : "prov:hadGeneration",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The _optional_ Generation involved in an Entity's Derivation."
+    },
+    "domain" : "prov:Derivation",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "hadGeneration",
+    "range" : "prov:Generation",
+    "category" : "qualified",
+    "component" : "derivations",
+    "inverse" : "generatedAsDerivation",
+    "sharesDefinitionWith" : "prov:Generation"
+  }, {
+    "@id" : "prov:hadInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "hadInfluence",
+    "inverseOf" : "prov:influencer"
+  }, {
+    "@id" : "prov:hadMember",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Collection",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "hadMember",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "category" : "expanded",
+    "component" : "expanded",
+    "inverse" : "wasMemberOf",
+    "sharesDefinitionWith" : "prov:Collection"
+  }, {
+    "@id" : "prov:hadPlan",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The _optional_ Plan adopted by an Agent in Association with some Activity. Plan specifications are out of the scope of this specification."
+    },
+    "domain" : "prov:Association",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "hadPlan",
+    "range" : "prov:Plan",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "inverse" : "wasPlanOf",
+    "sharesDefinitionWith" : "prov:Plan"
+  }, {
+    "@id" : "prov:hadPrimarySource",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "hadPrimarySource",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasDerivedFrom",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedPrimarySource", "prov:entity" ]
+    },
+    "category" : "expanded",
+    "component" : "derivations",
+    "inverse" : "wasPrimarySourceOf",
+    "qualifiedForm" : [ "prov:PrimarySource", "prov:qualifiedPrimarySource" ]
+  }, {
+    "@id" : "prov:hadRevision",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "hadRevision",
+    "inverseOf" : "prov:wasRevisionOf"
+  }, {
+    "@id" : "prov:hadRole",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ]."
+    }, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ],
+    "domain" : [ "_:b43", "prov:Influence" ],
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "hadRole",
+    "range" : "prov:Role",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "editorsDefinition" : {
+      "@language" : "en",
+      "@value" : "prov:hadRole references the Role (i.e. the function of an entity with respect to an activity), in the context of an instantaneous usage, generation, association, start, and end."
+    },
+    "inverse" : "wasRoleIn",
+    "sharesDefinitionWith" : "prov:Role"
+  }, {
+    "@id" : "prov:hadUsage",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The _optional_ Usage involved in an Entity's Derivation."
+    },
+    "domain" : "prov:Derivation",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "label" : "hadUsage",
+    "range" : "prov:Usage",
+    "category" : "qualified",
+    "component" : "derivations",
+    "inverse" : "wasUsedInDerivation",
+    "sharesDefinitionWith" : "prov:Usage"
+  }, {
+    "@id" : "prov:has_anchor",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Indicates anchor URI for a potentially dynamic resource instance."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "has_anchor",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#resource-represented-as-html",
+    "category" : "access-and-query",
+    "inverse" : "anchorOf"
+  }, {
+    "@id" : "prov:has_provenance",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Indicates a provenance-URI for a resource; the resource identified by this property presents a provenance record about its subject or anchor resource."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "has_provenance",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#resource-represented-as-html",
+    "category" : "access-and-query",
+    "inverse" : "provenanceOf"
+  }, {
+    "@id" : "prov:has_query_service",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Indicates a provenance query service that can access provenance related to its subject or anchor resource."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "hasProvenanceService",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/",
+    "category" : "access-and-query",
+    "inverse" : "provenanceQueryServiceOf"
+  }, {
+    "@id" : "prov:influenced",
+    "@type" : "owl:ObjectProperty",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov.owl#", "http://www.w3.org/ns/prov-o#" ],
+    "label" : "influenced",
+    "inverseOf" : "prov:wasInfluencedBy",
+    "category" : "expanded",
+    "component" : "agents-responsibility",
+    "inverse" : "wasInfluencedBy",
+    "sharesDefinitionWith" : "prov:Influence"
+  }, {
+    "@id" : "prov:influencer",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Subproperties of prov:influencer are used to cite the object of an unqualified PROV-O triple whose predicate is a subproperty of prov:wasInfluencedBy (e.g. prov:used, prov:wasGeneratedBy). prov:influencer is used much like rdf:object is used."
+    },
+    "domain" : "prov:Influence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "influencer",
+    "range" : "owl:Thing",
+    "category" : "qualified",
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "This property and its subproperties are used in the same way as the rdf:object property, i.e. to reference the object of an unqualified prov:wasInfluencedBy or prov:influenced triple."
+    },
+    "editorsDefinition" : {
+      "@language" : "en",
+      "@value" : "This property is used as part of the qualified influence pattern. Subclasses of prov:Influence use these subproperties to reference the resource (Entity, Agent, or Activity) whose influence is being qualified."
+    },
+    "inverse" : "hadInfluence"
+  }, {
+    "@id" : "prov:informed",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "informed",
+    "inverseOf" : "prov:wasInformedBy"
+  }, {
+    "@id" : "prov:insertedKeyEntityPair",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Insertion",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "insertedKeyEntityPair",
+    "range" : "prov:KeyEntityPair",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "An object property to refer to the prov:KeyEntityPair inserted into a prov:Dictionary.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion"
+  }, {
+    "@id" : "prov:invalidated",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Activity",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov-o#", "http://www.w3.org/ns/prov.owl#" ],
+    "label" : "invalidated",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:influenced",
+    "inverseOf" : "prov:wasInvalidatedBy",
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "prov:invalidated is one of few inverse property defined, to allow Activity-oriented assertions in addition to Entity-oriented assertions."
+    },
+    "inverse" : "wasInvalidatedBy",
+    "sharesDefinitionWith" : "prov:Invalidation"
+  }, {
+    "@id" : "prov:invalidatedAtTime",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The time at which an entity was invalidated (i.e., no longer usable)."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "invalidatedAtTime",
+    "range" : "xsd:dateTime",
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "It is the intent that the property chain holds: (prov:qualifiedInvalidation o prov:atTime) rdfs:subPropertyOf prov:invalidatedAtTime."
+    },
+    "qualifiedForm" : [ "prov:atTime", "prov:Invalidation" ]
+  }, {
+    "@id" : "prov:inverse",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "PROV-O does not define all property inverses. The directionalities defined in PROV-O should be given preference over those not defined. However, if users wish to name the inverse of a PROV-O property, the local name given by prov:inverse should be used."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "seeAlso" : "http://www.w3.org/TR/prov-o/#names-of-inverse-properties"
+  }, {
+    "@id" : "prov:locationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "locationOf",
+    "inverseOf" : "prov:atLocation"
+  }, {
+    "@id" : "prov:mentionOf",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "prov:mentionOf is used to specialize an entity as described in another bundle. It is to be used in conjuction with prov:asInBundle.\n\nprov:asInBundle is used to cite the Bundle in which the generalization was mentioned."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-links#",
+    "label" : "mentionOf",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:specializationOf",
+    "inverse" : "hadMention"
+  }, {
+    "@id" : "prov:n",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "A reference to the principal section of the PROV-M document that describes this concept."
+    }, {
+      "@language" : "en",
+      "@value" : "A reference to the principal section of the PROV-DM document that describes this concept."
+    } ],
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "prov:order",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The position that this OWL term should be listed within documentation. The scope of the documentation (e.g., among all terms, among terms within a prov:category, among properties applying to a particular class, etc.) is unspecified."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#"
+  }, {
+    "@id" : "prov:pairEntity",
+    "@type" : [ "owl:FunctionalProperty", "owl:ObjectProperty" ],
+    "domain" : "prov:KeyEntityPair",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "pairKey",
+    "range" : "prov:Entity",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "The entity of a prov:KeyEntityPair, which is an element of a prov:Dictionary.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership"
+  }, {
+    "@id" : "prov:pairKey",
+    "@type" : [ "owl:DatatypeProperty", "owl:FunctionalProperty" ],
+    "domain" : "prov:KeyEntityPair",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "pairKey",
+    "range" : "rdfs:Literal",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "The key of a prov:KeyEntityPair, which is an element of a prov:Dictionary.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership"
+  }, {
+    "@id" : "prov:pingback",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a resource to a provenance pingback service that may receive additional provenance links about the resource."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "provenance pingback",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-pingback",
+    "category" : "access-and-query"
+  }, {
+    "@id" : "prov:provenanceUriTemplate",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relates a provenance service to a URI template string for constructing provenance-URIs."
+    },
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "provenanceUriTemplate",
+    "aq" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/",
+    "category" : "access-and-query"
+  }, {
+    "@id" : "prov:qualifiedAssociation",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Activity prov:wasAssociatedWith Agent :ag, then it can qualify the Association using prov:qualifiedAssociation [ a prov:Association;  prov:agent :ag; :foo :bar ]."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedAssociation",
+    "range" : "prov:Association",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "inverse" : "qualifiedAssociationOf",
+    "sharesDefinitionWith" : "prov:Association",
+    "unqualifiedForm" : "prov:wasAssociatedWith"
+  }, {
+    "@id" : "prov:qualifiedAssociationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedAssociationOf",
+    "inverseOf" : "prov:qualifiedAssociation"
+  }, {
+    "@id" : "prov:qualifiedAttribution",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Entity prov:wasAttributedTo Agent :ag, then it can qualify how it was influenced using prov:qualifiedAttribution [ a prov:Attribution;  prov:agent :ag; :foo :bar ]."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedAttribution",
+    "range" : "prov:Attribution",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "inverse" : "qualifiedAttributionOf",
+    "sharesDefinitionWith" : "prov:Attribution",
+    "unqualifiedForm" : "prov:wasAttributedTo"
+  }, {
+    "@id" : "prov:qualifiedAttributionOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedAttributionOf",
+    "inverseOf" : "prov:qualifiedAttribution"
+  }, {
+    "@id" : "prov:qualifiedCommunication",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Activity prov:wasInformedBy Activity :a, then it can qualify how it was influenced using prov:qualifiedCommunication [ a prov:Communication;  prov:activity :a; :foo :bar ]."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedCommunication",
+    "range" : "prov:Communication",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "inverse" : "qualifiedCommunicationOf",
+    "qualifiedForm" : "prov:Communication",
+    "sharesDefinitionWith" : "prov:Communication"
+  }, {
+    "@id" : "prov:qualifiedCommunicationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedCommunicationOf",
+    "inverseOf" : "prov:qualifiedCommunication"
+  }, {
+    "@id" : "prov:qualifiedDelegation",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Agent prov:actedOnBehalfOf Agent :ag, then it can qualify how with prov:qualifiedResponsibility [ a prov:Responsibility;  prov:agent :ag; :foo :bar ]."
+    },
+    "domain" : "prov:Agent",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedDelegation",
+    "range" : "prov:Delegation",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "inverse" : "qualifiedDelegationOf",
+    "sharesDefinitionWith" : "prov:Delegation",
+    "unqualifiedForm" : "prov:actedOnBehalfOf"
+  }, {
+    "@id" : "prov:qualifiedDelegationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedDelegationOf",
+    "inverseOf" : "prov:qualifiedDelegation"
+  }, {
+    "@id" : "prov:qualifiedDerivation",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Entity prov:wasDerivedFrom Entity :e, then it can qualify how it was derived using prov:qualifiedDerivation [ a prov:Derivation;  prov:entity :e; :foo :bar ]."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedDerivation",
+    "range" : "prov:Derivation",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "derivations",
+    "inverse" : "qualifiedDerivationOf",
+    "sharesDefinitionWith" : "prov:Derivation",
+    "unqualifiedForm" : "prov:wasDerivedFrom"
+  }, {
+    "@id" : "prov:qualifiedDerivationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedDerivationOf",
+    "inverseOf" : "prov:qualifiedDerivation"
+  }, {
+    "@id" : "prov:qualifiedEnd",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Activity prov:wasEndedBy Entity :e1, then it can qualify how it was ended using prov:qualifiedEnd [ a prov:End;  prov:entity :e1; :foo :bar ]."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedEnd",
+    "range" : "prov:End",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "inverse" : "qualifiedEndOf",
+    "sharesDefinitionWith" : "prov:End",
+    "unqualifiedForm" : "prov:wasEndedBy"
+  }, {
+    "@id" : "prov:qualifiedEndOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedEndOf",
+    "inverseOf" : "prov:qualifiedEnd"
+  }, {
+    "@id" : "prov:qualifiedForm",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This annotation property links a subproperty of prov:wasInfluencedBy with the subclass of prov:Influence and the qualifying property that are used to qualify it. \n\nExample annotation:\n\n    prov:wasGeneratedBy prov:qualifiedForm prov:qualifiedGeneration, prov:Generation .\n\nThen this unqualified assertion:\n\n    :entity1 prov:wasGeneratedBy :activity1 .\n\ncan be qualified by adding:\n\n   :entity1 prov:qualifiedGeneration :entity1Gen .\n   :entity1Gen \n       a prov:Generation, prov:Influence;\n       prov:activity :activity1;\n       :customValue 1337 .\n\nNote how the value of the unqualified influence (prov:wasGeneratedBy :activity1) is mirrored as the value of the prov:activity (or prov:entity, or prov:agent) property on the influence class."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "prov:qualifiedGeneration",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Activity prov:generated Entity :e, then it can qualify how it performed the Generation using prov:qualifiedGeneration [ a prov:Generation;  prov:entity :e; :foo :bar ]."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedGeneration",
+    "range" : "prov:Generation",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "inverse" : "qualifiedGenerationOf",
+    "sharesDefinitionWith" : "prov:Generation",
+    "unqualifiedForm" : "prov:wasGeneratedBy"
+  }, {
+    "@id" : "prov:qualifiedGenerationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedGenerationOf",
+    "inverseOf" : "prov:qualifiedGeneration"
+  }, {
+    "@id" : "prov:qualifiedInfluence",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Because prov:qualifiedInfluence is a broad relation, the more specific relations (qualifiedCommunication, qualifiedDelegation, qualifiedEnd, etc.) should be used when applicable."
+    },
+    "domain" : "_:b41",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedInfluence",
+    "range" : "prov:Influence",
+    "category" : "qualified",
+    "component" : "derivations",
+    "inverse" : "qualifiedInfluenceOf",
+    "sharesDefinitionWith" : "prov:Influence",
+    "unqualifiedForm" : "prov:wasInfluencedBy"
+  }, {
+    "@id" : "prov:qualifiedInfluenceOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedInfluenceOf",
+    "inverseOf" : "prov:qualifiedInfluence"
+  }, {
+    "@id" : "prov:qualifiedInsertion",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Dictionary",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "qualifiedInsertion",
+    "range" : "prov:Insertion",
+    "subPropertyOf" : "prov:qualifiedDerivation",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "prov:qualifiedInsertion shows the details of an insertion, in particular the inserted key-entity pairs.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion"
+  }, {
+    "@id" : "prov:qualifiedInvalidation",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Entity prov:wasInvalidatedBy Activity :a, then it can qualify how it was invalidated using prov:qualifiedInvalidation [ a prov:Invalidation;  prov:activity :a; :foo :bar ]."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedInvalidation",
+    "range" : "prov:Invalidation",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "inverse" : "qualifiedInvalidationOf",
+    "sharesDefinitionWith" : "prov:Invalidation",
+    "unqualifiedForm" : "prov:wasInvalidatedBy"
+  }, {
+    "@id" : "prov:qualifiedInvalidationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedInvalidationOf",
+    "inverseOf" : "prov:qualifiedInvalidation"
+  }, {
+    "@id" : "prov:qualifiedPrimarySource",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Entity prov:hadPrimarySource Entity :e, then it can qualify how using prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :e; :foo :bar ]."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedPrimarySource",
+    "range" : "prov:PrimarySource",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "derivations",
+    "inverse" : "qualifiedSourceOf",
+    "sharesDefinitionWith" : "prov:PrimarySource",
+    "unqualifiedForm" : "prov:hadPrimarySource"
+  }, {
+    "@id" : "prov:qualifiedQuotation",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Entity prov:wasQuotedFrom Entity :e, then it can qualify how using prov:qualifiedQuotation [ a prov:Quotation;  prov:entity :e; :foo :bar ]."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedQuotation",
+    "range" : "prov:Quotation",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "derivations",
+    "inverse" : "qualifiedQuotationOf",
+    "sharesDefinitionWith" : "prov:Quotation",
+    "unqualifiedForm" : "prov:wasQuotedFrom"
+  }, {
+    "@id" : "prov:qualifiedQuotationOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedQuotationOf",
+    "inverseOf" : "prov:qualifiedQuotation"
+  }, {
+    "@id" : "prov:qualifiedRemoval",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Dictionary",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "qualifiedRemoval",
+    "range" : "prov:Removal",
+    "subPropertyOf" : "prov:qualifiedDerivation",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "prov:qualifiedRemoval shows the details of a removal, in particular the removed keys.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal"
+  }, {
+    "@id" : "prov:qualifiedRevision",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Entity prov:wasRevisionOf Entity :e, then it can qualify how it was revised using prov:qualifiedRevision [ a prov:Revision;  prov:entity :e; :foo :bar ]."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedRevision",
+    "range" : "prov:Revision",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "derivations",
+    "inverse" : "revisedEntity",
+    "sharesDefinitionWith" : "prov:Revision",
+    "unqualifiedForm" : "prov:wasRevisionOf"
+  }, {
+    "@id" : "prov:qualifiedSourceOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedSourceOf",
+    "inverseOf" : "prov:qualifiedPrimarySource"
+  }, {
+    "@id" : "prov:qualifiedStart",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Activity prov:wasStartedBy Entity :e1, then it can qualify how it was started using prov:qualifiedStart [ a prov:Start;  prov:entity :e1; :foo :bar ]."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedStart",
+    "range" : "prov:Start",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "inverse" : "qualifiedStartOf",
+    "sharesDefinitionWith" : "prov:Start",
+    "unqualifiedForm" : "prov:wasStartedBy"
+  }, {
+    "@id" : "prov:qualifiedStartOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedStartOf",
+    "inverseOf" : "prov:qualifiedStart"
+  }, {
+    "@id" : "prov:qualifiedUsage",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "If this Activity prov:used Entity :e, then it can qualify how it used it using prov:qualifiedUsage [ a prov:Usage; prov:entity :e; :foo :bar ]."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "qualifiedUsage",
+    "range" : "prov:Usage",
+    "subPropertyOf" : "prov:qualifiedInfluence",
+    "category" : "qualified",
+    "component" : "entities-activities",
+    "inverse" : "qualifiedUsingActivity",
+    "sharesDefinitionWith" : "prov:Usage",
+    "unqualifiedForm" : "prov:used"
+  }, {
+    "@id" : "prov:qualifiedUsingActivity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "qualifiedUsingActivity",
+    "inverseOf" : "prov:qualifiedUsage"
+  }, {
+    "@id" : "prov:quotedAs",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "quotedAs",
+    "inverseOf" : "prov:wasQuotedFrom"
+  }, {
+    "@id" : "prov:removedKey",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "prov:Removal",
+    "isDefinedBy" : "http://www.w3.org/ns/prov#",
+    "label" : "removedKey",
+    "range" : "rdfs:Literal",
+    "category" : "collections",
+    "component" : "collections",
+    "constraints" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#dictionary-constraints",
+    "definition" : "The key removed in a Removal.",
+    "dm" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal",
+    "n" : "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal"
+  }, {
+    "@id" : "prov:revisedEntity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "revisedEntity",
+    "inverseOf" : "prov:qualifiedRevision"
+  }, {
+    "@id" : "prov:sharesDefinitionWith",
+    "@type" : "owl:AnnotationProperty",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "prov:specializationOf",
+    "@type" : [ "owl:ObjectProperty", "owl:AnnotationProperty" ],
+    "domain" : "prov:Entity",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "label" : "specializationOf",
+    "range" : "prov:Entity",
+    "seeAlso" : "prov:alternateOf",
+    "subPropertyOf" : [ "owl:topObjectProperty", "prov:alternateOf" ],
+    "category" : "expanded",
+    "component" : "alternate",
+    "constraints" : [ "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-constraints.html#prov-dm-constraints-fig", "http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig" ],
+    "definition" : {
+      "@language" : "en",
+      "@value" : "An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity."
+    },
+    "dm" : [ "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization", "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-specialization" ],
+    "inverse" : "generalizationOf",
+    "n" : [ "http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-n.html#expression-specialization", "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization" ]
+  }, {
+    "@id" : "prov:started",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "started",
+    "inverseOf" : "prov:wasStartedBy"
+  }, {
+    "@id" : "prov:startedAtTime",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The time at which an activity started. See also prov:endedAtTime."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "startedAtTime",
+    "range" : "xsd:dateTime",
+    "category" : "starting-point",
+    "component" : "entities-activities",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "It is the intent that the property chain holds: (prov:qualifiedStart o prov:atTime) rdfs:subPropertyOf prov:startedAtTime."
+    },
+    "qualifiedForm" : [ "prov:Start", "prov:atTime" ]
+  }, {
+    "@id" : "prov:todo",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "prov:unqualifiedForm",
+    "@type" : "owl:AnnotationProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Classes and properties used to qualify relationships are annotated with prov:unqualifiedForm to indicate the property used to assert an unqualified provenance relation."
+    },
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/ns/prov-o#" ],
+    "subPropertyOf" : "rdfs:seeAlso"
+  }, {
+    "@id" : "prov:used",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A prov:Entity that was used by this prov:Activity. For example, :baking prov:used :spoon, :egg, :oven ."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "used",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedUsage", "prov:entity" ]
+    },
+    "category" : "starting-point",
+    "component" : "entities-activities",
+    "inverse" : "wasUsedBy",
+    "qualifiedForm" : [ "prov:Usage", "prov:qualifiedUsage" ]
+  }, {
+    "@id" : "prov:value",
+    "@type" : "owl:DatatypeProperty",
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "value",
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Provides a value that is a direct representation of an entity."
+    },
+    "dm" : "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-value",
+    "editorialNote" : [ {
+      "@language" : "en",
+      "@value" : "This property serves the same purpose as rdf:value, but has been reintroduced to avoid some of the definitional ambiguity in the RDF specification (specifically, 'may be used in describing structured values')."
+    }, "The editor's definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue" ]
+  }, {
+    "@id" : "prov:wasActivityOfInfluence",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasActivityOfInfluence",
+    "inverseOf" : "prov:hadActivity"
+  }, {
+    "@id" : "prov:wasAssociateFor",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasAssociateFor",
+    "inverseOf" : "prov:wasAssociatedWith"
+  }, {
+    "@id" : "prov:wasAssociatedWith",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasAssociatedWith",
+    "range" : "prov:Agent",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedAssociation", "prov:agent" ]
+    },
+    "category" : "starting-point",
+    "component" : "agents-responsibility",
+    "inverse" : "wasAssociateFor",
+    "qualifiedForm" : [ "prov:Association", "prov:qualifiedAssociation" ]
+  }, {
+    "@id" : "prov:wasAttributedTo",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Attribution is the ascribing of an entity to an agent."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasAttributedTo",
+    "range" : "prov:Agent",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedAttribution", "prov:agent" ]
+    },
+    "category" : "starting-point",
+    "component" : "agents-responsibility",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "Attribution is the ascribing of an entity to an agent."
+    },
+    "inverse" : "contributed",
+    "qualifiedForm" : [ "prov:Attribution", "prov:qualifiedAttribution" ]
+  }, {
+    "@id" : "prov:wasDerivedFrom",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasDerivedFrom",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedDerivation", "prov:entity" ]
+    },
+    "category" : "starting-point",
+    "component" : "derivations",
+    "definition" : {
+      "@language" : "en",
+      "@value" : "A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity."
+    },
+    "inverse" : "hadDerivation",
+    "qualifiedForm" : [ "prov:Derivation", "prov:qualifiedDerivation" ]
+  }, {
+    "@id" : "prov:wasEndedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "End is when an activity is deemed to have ended. An end may refer to an entity, known as trigger, that terminated the activity."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasEndedBy",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedEnd", "prov:entity" ]
+    },
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "inverse" : "ended",
+    "qualifiedForm" : [ "prov:qualifiedEnd", "prov:End" ]
+  }, {
+    "@id" : "prov:wasGeneratedBy",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Entity",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov.owl#", "http://www.w3.org/ns/prov-o#" ],
+    "label" : "wasGeneratedBy",
+    "range" : "prov:Activity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "inverseOf" : "prov:generated",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedGeneration", "prov:activity" ]
+    },
+    "category" : "starting-point",
+    "component" : "entities-activities",
+    "inverse" : "generated",
+    "qualifiedForm" : [ "prov:Generation", "prov:qualifiedGeneration" ]
+  }, {
+    "@id" : "prov:wasInfluencedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>.", {
+      "@language" : "en",
+      "@value" : "Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable."
+    } ],
+    "domain" : "_:b28",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov-o#", "http://www.w3.org/ns/prov.owl#" ],
+    "label" : "wasInfluencedBy",
+    "range" : "_:b27",
+    "inverseOf" : "prov:influenced",
+    "category" : "qualified",
+    "component" : "agents-responsibility",
+    "editorialNote" : {
+      "@language" : "en",
+      "@value" : "The sub-properties of prov:wasInfluencedBy can be elaborated in more detail using the Qualification Pattern. For example, the binary relation :baking prov:used :spoon can be qualified by asserting :baking prov:qualifiedUsage [ a prov:Usage; prov:entity :spoon; prov:atLocation :kitchen ] .\n\nSubproperties of prov:wasInfluencedBy may also be asserted directly without being qualified.\n\nprov:wasInfluencedBy should not be used without also using one of its subproperties. \n"
+    },
+    "inverse" : "influenced",
+    "qualifiedForm" : [ "prov:Influence", "prov:qualifiedInfluence" ],
+    "sharesDefinitionWith" : "prov:Influence"
+  }, {
+    "@id" : "prov:wasInformedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An activity a2 is dependent on or informed by another activity a1, by way of some unspecified entity that is generated by a1 and used by a2."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasInformedBy",
+    "range" : "prov:Activity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedCommunication", "prov:activity" ]
+    },
+    "category" : "starting-point",
+    "component" : "entities-activities",
+    "inverse" : "informed",
+    "qualifiedForm" : [ "prov:qualifiedCommunication", "prov:Communication" ]
+  }, {
+    "@id" : "prov:wasInvalidatedBy",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "prov:Entity",
+    "isDefinedBy" : [ "http://www.w3.org/ns/prov.owl#", "http://www.w3.org/ns/prov-o#" ],
+    "label" : "wasInvalidatedBy",
+    "range" : "prov:Activity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "inverseOf" : "prov:invalidated",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedInvalidation", "prov:activity" ]
+    },
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "inverse" : "invalidated",
+    "qualifiedForm" : [ "prov:qualifiedInvalidation", "prov:Invalidation" ]
+  }, {
+    "@id" : "prov:wasMemberOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasMemberOf",
+    "inverseOf" : "prov:hadMember"
+  }, {
+    "@id" : "prov:wasPlanOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasPlanOf",
+    "inverseOf" : "prov:hadPlan"
+  }, {
+    "@id" : "prov:wasPrimarySourceOf",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasPrimarySourceOf",
+    "inverseOf" : "prov:hadPrimarySource"
+  }, {
+    "@id" : "prov:wasQuotedFrom",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "An entity is derived from an original entity by copying, or 'quoting', some or all of it."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasQuotedFrom",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasDerivedFrom",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedQuotation", "prov:entity" ]
+    },
+    "category" : "expanded",
+    "component" : "derivations",
+    "inverse" : "quotedAs",
+    "qualifiedForm" : [ "prov:qualifiedQuotation", "prov:Quotation" ]
+  }, {
+    "@id" : "prov:wasRevisionOf",
+    "@type" : [ "owl:ObjectProperty", "owl:AnnotationProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "A revision is a derivation that revises an entity into a revised version."
+    },
+    "domain" : "prov:Entity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasRevisionOf",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasDerivedFrom",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedRevision", "prov:entity" ]
+    },
+    "category" : "expanded",
+    "component" : "derivations",
+    "inverse" : "hadRevision",
+    "qualifiedForm" : [ "prov:Revision", "prov:qualifiedRevision" ]
+  }, {
+    "@id" : "prov:wasRoleIn",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasRoleIn",
+    "inverseOf" : "prov:hadRole"
+  }, {
+    "@id" : "prov:wasStartedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Start is when an activity is deemed to have started. A start may refer to an entity, known as trigger, that initiated the activity."
+    },
+    "domain" : "prov:Activity",
+    "isDefinedBy" : "http://www.w3.org/ns/prov-o#",
+    "label" : "wasStartedBy",
+    "range" : "prov:Entity",
+    "subPropertyOf" : "prov:wasInfluencedBy",
+    "propertyChainAxiom" : {
+      "@list" : [ "prov:qualifiedStart", "prov:entity" ]
+    },
+    "category" : "expanded",
+    "component" : "entities-activities",
+    "inverse" : "started",
+    "qualifiedForm" : [ "prov:qualifiedStart", "prov:Start" ]
+  }, {
+    "@id" : "prov:wasUsedBy",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasUsedBy",
+    "inverseOf" : "prov:used"
+  }, {
+    "@id" : "prov:wasUsedInDerivation",
+    "isDefinedBy" : "http://www.w3.org/ns/prov.owl#",
+    "label" : "wasUsedInDerivation",
+    "inverseOf" : "prov:hadUsage"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov-aq#",
+    "@type" : "owl:Ontology",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). \n\nIf you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."
+    }, "0.2" ],
+    "label" : {
+      "@language" : "en",
+      "@value" : "PROV Access and Query Ontology"
+    },
+    "seeAlso" : [ "http://www.w3.org/ns/prov#", "http://www.w3.org/TR/prov-aq/" ],
+    "versionIRI" : "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov-dc#",
+    "@type" : "owl:Ontology",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). \n\nIf you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Dublin Core extensions of the W3C PROVenance Interchange Ontology (PROV-O) "
+    },
+    "imports" : "http://www.w3.org/ns/prov-o#"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov-dictionary#",
+    "@type" : "owl:Ontology",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). \n\nIf you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "W3C PROVenance Interchange Ontology (PROV-O) Dictionary Extension"
+    },
+    "seeAlso" : [ "http://www.w3.org/ns/prov", "http://www.w3.org/TR/prov-dictionary/" ]
+  }, {
+    "@id" : "http://www.w3.org/ns/prov-links#",
+    "@type" : "owl:Ontology",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/\n). All feedback is welcome."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "W3C PROV Linking Across Provenance Bundles Ontology (PROV-LINKS)"
+    },
+    "seeAlso" : [ "http://www.w3.org/ns/prov", "http://www.w3.org/TR/prov-links/" ],
+    "imports" : "http://www.w3.org/ns/prov-o#",
+    "versionIRI" : "http://www.w3.org/ns/prov-links-20130430",
+    "versionInfo" : {
+      "@language" : "en",
+      "@value" : "Working Group Note version 2013-04-30"
+    },
+    "specializationOf" : "http://www.w3.org/ns/prov-links"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov-o#",
+    "@type" : "owl:Ontology",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). \n\nIf you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "W3C PROVenance Interchange Ontology (PROV-O)"
+    },
+    "seeAlso" : [ "http://www.w3.org/ns/prov", "http://www.w3.org/TR/prov-o/" ],
+    "versionIRI" : "http://www.w3.org/ns/prov-o-20130430",
+    "versionInfo" : {
+      "@language" : "en",
+      "@value" : "Recommendation version 2013-04-30"
+    },
+    "specializationOf" : "http://www.w3.org/ns/prov-o",
+    "wasRevisionOf" : "http://www.w3.org/ns/prov-o-20120312"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov-o-inverses#",
+    "@type" : "owl:Ontology"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov.owl#",
+    "@type" : "owl:Ontology",
+    "seeAlso" : "http://www.w3.org/TR/prov-o/#names-of-inverse-properties",
+    "imports" : "http://www.w3.org/ns/prov-o#",
+    "versionIRI" : "http://www.w3.org/ns/prov-o-inverses-20130430",
+    "specializationOf" : "http://www.w3.org/ns/prov.owl",
+    "wasDerivedFrom" : "http://www.w3.org/ns/prov-o-20130430",
+    "wasRevisionOf" : "http://www.w3.org/ns/prov-o-inverses-20120312"
+  } ],
+  "@context" : {
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "disjointWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
+      "@type" : "@id"
+    },
+    "category" : "http://www.w3.org/ns/prov#category",
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+      "@type" : "@id"
+    },
+    "component" : "http://www.w3.org/ns/prov#component",
+    "definition" : "http://www.w3.org/ns/prov#definition",
+    "label" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "dm" : {
+      "@id" : "http://www.w3.org/ns/prov#dm",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "constraints" : {
+      "@id" : "http://www.w3.org/ns/prov#constraints",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "n" : {
+      "@id" : "http://www.w3.org/ns/prov#n",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "inverse" : "http://www.w3.org/ns/prov#inverse",
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "editorialNote" : "http://www.w3.org/ns/prov#editorialNote",
+    "editorsDefinition" : "http://www.w3.org/ns/prov#editorsDefinition",
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "cardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "comment" : "http://www.w3.org/2000/01/rdf-schema#comment",
+    "unqualifiedForm" : {
+      "@id" : "http://www.w3.org/ns/prov#unqualifiedForm",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "qualifiedForm" : {
+      "@id" : "http://www.w3.org/ns/prov#qualifiedForm",
+      "@type" : "@id"
+    },
+    "propertyChainAxiom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
+      "@type" : "@id"
+    },
+    "sharesDefinitionWith" : {
+      "@id" : "http://www.w3.org/ns/prov#sharesDefinitionWith",
+      "@type" : "@id"
+    },
+    "annotatedSource" : {
+      "@id" : "http://www.w3.org/2002/07/owl#annotatedSource",
+      "@type" : "@id"
+    },
+    "annotatedTarget" : {
+      "@id" : "http://www.w3.org/2002/07/owl#annotatedTarget",
+      "@type" : "@id"
+    },
+    "annotatedProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#annotatedProperty",
+      "@type" : "@id"
+    },
+    "specializationOf" : {
+      "@id" : "http://www.w3.org/ns/prov#specializationOf",
+      "@type" : "@id"
+    },
+    "versionInfo" : "http://www.w3.org/2002/07/owl#versionInfo",
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "minCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "wasRevisionOf" : {
+      "@id" : "http://www.w3.org/ns/prov#wasRevisionOf",
+      "@type" : "@id"
+    },
+    "wasDerivedFrom" : {
+      "@id" : "http://www.w3.org/ns/prov#wasDerivedFrom",
+      "@type" : "@id"
+    },
+    "unionOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#unionOf",
+      "@type" : "@id"
+    },
+    "aq" : {
+      "@id" : "http://www.w3.org/ns/prov#aq",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "maxCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#maxCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "" : "http://www.w3.org/ns/prov-dc#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "prov" : "http://www.w3.org/ns/prov#"
+  }
+}
